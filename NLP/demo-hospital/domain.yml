@@ -6,6 +6,34 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - make_appiontment
+  - change_appiontment
+  - delete_appointment
+  - check_appointment
+  - get_report
+  - inform_name
+  - inform_usertype
+  - inform_date
+  - inform_time
+  - inform_relativetime
+  - inform_userhash
+  - inform_reporthash
+
+
+entities:
+  - reservation
+  - option
+  - service_person
+  - date
+  - person_name
+  - time
+  - userhash
+  - reporthash
+  - client_person
+  - relativedate
+  - refer_after
+  - refer_before
+  - deliverable
 
 responses:
   utter_greet:
@@ -28,5 +56,5 @@ responses:
   - text: "I am a bot, powered by Rasa."
 
 session_config:
-  session_expiration_time: 60
+  session_expiration_time: 300
   carry_over_slots_to_new_session: true
