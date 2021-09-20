@@ -155,11 +155,15 @@ SIMPLE_JWT = {
    'AUTH_HEADER_TYPES': ('JWT',),
 }
 
+DOMAIN = 'www.wingman.com'
+SITE_NAME = 'Wingman'
+
 DJOSER = {
     'LOGIN_FIELD': 'email',
     'USER_CREATE_PASSWORD_RETYPE': True,
     'USERNAME_CHANGED_EMAIL_CONFIRMATION': True,
     'PASSWORD_CHANGED_EMAIL_CONFIRMATION': True,
+    'PASSWORD_RESET_SHOW_EMAIL_NOT_FOUND':True,
     'SEND_CONFIRMATION_EMAIL': True,
     'SET_PASSWORD_RETYPE': True,
     'SET_USERNAME_RETYPE': True,
@@ -168,9 +172,13 @@ DJOSER = {
     'ACTIVATION_URL':'activate/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL': True,
     'SERIALIZER': {
-
+        'user_create':'accounts.serializers.UserCreateSerializer',
+        'user' : 'accounts.serializers.UserCreateSerializer',
+        'user_delete':'djoser.serializers.UserDeleteSerializer'
+    },
+    'EMAIL': {
+        'activation': 'accounts.email.ActivationEmail'
     }
-
 }
 
 AUTH_USER_MODEL = 'accounts.UserAccount'
