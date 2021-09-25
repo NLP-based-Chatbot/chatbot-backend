@@ -131,10 +131,6 @@
 - show me my [appointment](reservation) on [2021/11/12](date)
 - show me my [appointments](reservation) [today](relativedate)
 
-- who wants to meet me [today](relativedate)
-- who wants to meet me at [5.00](time) [tomorrow](relativedate)
-- who is waiting to meet me on [tomorrow](relativedate)
-
 - do i have [appointments](reservation) at [14.00](time)
 - is there any [appoinment](reservation) on [2022-9-8](date)
 - are there [appoinments](reservation) on [2022-9-8](date)
@@ -147,31 +143,32 @@
 - issue my [report](deliverable)
 - is my [report](deliverable) available?
 - where is my [report](deliverable) ?
-- i need all of my [patients](client_person) [reports](deliverable)
-- i need [reports](deliverable) issued by me
+
 
 - i want my [report](deliverable)
 - i want to get my [report](deliverable)
 
-## intent:inform_name
-- [dr](service_person) [kamal](person_name)
-- [dr.](service_person) [kamal](person_name)
-- [dr](service_person) [saman](person_name)
-- [dr.](service_person) [saman](person_name)
-- [dr](service_person) [jayawardana](person_name)
-- [dr.](service_person) [jayawardana](person_name)
-- [dr](service_person) [dissaneyake](person_name)
-- [dr.](service_person) [rathnasiri](person_name)
+## intent:inform_doct_name
+- [dr](service_person) [kamal](sp_name)
+- [dr.](service_person) [kamal](sp_name)
+- [dr](service_person) [saman](sp_name)
+- [dr.](service_person) [saman](sp_name)
+- [dr](service_person) [jayawardana](sp_name)
+- [dr.](service_person) [jayawardana](sp_name)
+- [dr](service_person) [dissaneyake](sp_name)
+- [dr.](service_person) [rathnasiri](sp_name)
 
-- [doctor](service_person) [susantha](person_name)
-- [doctor](service_person) [jayanath](person_name)
-- [doctor](service_person) [prasad](person_name)
-- [doctor](service_person) [vimala](person_name)
-- [doctor](service_person) [sanduni](person_name)
-- [doctor](service_person) [vishaka](person_name)
-- [doctor](service_person) [lochana](person_name)
-- [doctor](service_person) [dilani](person_name)
+- [doctor](service_person) [susantha](sp_name)
+- [doctor](service_person) [jayanath](sp_name)
+- [doctor](service_person) [prasad](sp_name)
+- [doctor](service_person) [vimala](sp_name)
+- [doctor](service_person) [sanduni](sp_name)
+- [doctor](service_person) [vishaka](sp_name)
+- [doctor](service_person) [lochana](sp_name)
+- [doctor](service_person) [dilani](sp_name)
 
+
+## intent:inform_patient_name
 - [kavindu](person_name)
 - [dulaj](person_name)
 - [rathnaweera](person_name)
@@ -247,6 +244,13 @@
 - [45889gfg9834u987gdt83reg](userhash)
 - [feoguow3thogotoirgw5f67](userhash)
 
+## intent:inform_docthash
+- [doc_h5h3gkh2kl3g5256g5gk26](docthash)
+- [doc_j25k6kk32oi9g9080r9egs0](docthash)
+- [doc_5kk345kk62kk62l62jjhj2](docthash)
+- [doc_45889gfg9834u987gdt83g](docthash)
+- [doc_feoguow3thogotoirgw7](docthash)
+
 ## intent:inform_reporthash
 - [report_h5h3gkh2kl3g5256g5gk22lk6](reporthash)
 - [report_j25k6kk32oi9g9080r9egs09ggsd](reporthash)
@@ -256,6 +260,9 @@
 
 ## regex:userhash
 - ([0-9]|[a-z]){20-30}
+
+## regex:userhash
+- doc_([0-9]|[a-z]){15-25}
 
 ## regex:reporthash
 - report_([0-9]|[a-z]){20-30}
