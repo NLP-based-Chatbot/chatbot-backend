@@ -8,6 +8,62 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - make_appiontment
+  - change_appiontment
+  - delete_appointment
+  - check_appointment
+  - get_report
+  - inform_doct_name
+  - inform_patient_name
+  - inform_usertype
+  - inform_date
+  - inform_time
+  - inform_relativetime
+  - inform_userhash
+  - inform_reporthash
+
+
+entities:
+  - reservation
+  - option
+  - service_person
+  - date
+  - person_name
+  - sp_name
+  - time
+  - userhash
+  - docthash
+  - reporthash
+  - client_person
+  - relativedate
+  - refer_after
+  - refer_before
+  - deliverable
+
+slots:
+  option:
+    type: text
+  date:
+    type: text
+  relativedate:
+    type: text
+  person_name:
+    type: text
+  sp_name:
+    type: text
+  time:
+    type: text
+  refer_after:
+    type: text
+  refer_before:
+    type: text
+  userhash:
+    type: text
+  docthash:
+    type: text
+  reporthash:
+    type: text
+
 
 responses:
   utter_greet:
