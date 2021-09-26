@@ -157,3 +157,6 @@ dmypy.json
 
 #migrations
 */migrations/*.py
+
+#rasa models
+*/models/*.tar.gz
