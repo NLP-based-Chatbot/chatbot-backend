@@ -64,6 +64,12 @@ slots:
   reporthash:
     type: text
 
+actions:
+  - act_list_specilizations
+  - act_list_doctors
+  - act_list_dates
+  - act_list_timeslots
+
 
 responses:
   utter_greet:

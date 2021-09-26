@@ -17,10 +17,52 @@ from rasa_sdk.forms import FormAction
 from demo_hospital.dbconnection.demo_hospital_db import *
 
 
-class DoctorList(Action):
+class SpecList(Action):
 
     def name(self) -> Text:
         return "act_list_specilizations"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # userhash = tracker.get_slot("userhash")
+        
+
+        return []
+
+class DoctorList(Action):
+
+    def name(self) -> Text:
+        return "act_list_doctors"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # userhash = tracker.get_slot("userhash")
+        
+
+        return []
+
+class DateList(Action):
+
+    def name(self) -> Text:
+        return "act_list_dates"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # userhash = tracker.get_slot("userhash")
+        
+
+        return []
+
+class TimeSlotList(Action):
+
+    def name(self) -> Text:
+        return "act_list_timeslots"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
