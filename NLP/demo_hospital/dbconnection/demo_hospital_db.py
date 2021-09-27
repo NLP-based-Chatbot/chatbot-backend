@@ -1,5 +1,5 @@
 import sqlalchemy
-from sqlalchemy import create_engine,Column,Integer,String,Time,Date
+from sqlalchemy import create_engine,Column,Integer,String,Time,Date,ForeignKey
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -42,8 +42,8 @@ class Appiontment(Base):
     __tablename__ = "appointments"
 
     appointment_id  = Column(String(30),primary_key=True)
-    doctor_id       = Column(String(30))
-    cust_id         = Column(String(30))
+    doctor_id       = Column(String(30),ForeignKey("doctor.doctor_id"))
+    cust_id         = Column(String(30),ForeignKey("pstirnt_cust_id"))
     time_slot       = Column(Time())
     date            = Column(Date())
 
@@ -51,7 +51,8 @@ class DoctorAvailable(Base):
 
     __tablename__ = "doctor_availability"
 
-    docotr_id       = Column(String(30))
+    avbl_id         = Column(Integer(),primary_key=True)
+    docotr_id       = Column(String(30),ForeignKey("doctor.doctor_id"))
     day_of_week     = Column(String(10))
     time            = Column(Time())
 
@@ -60,28 +61,30 @@ class DoctorSpec(Base):
 
     __tablename__ = "doctor_specialization"
 
-    doctor_id   = Column(String(30))
-    spec_id     = Column(String(10))
+    d2s_id      = Column(Integer(),primary_key=True)
+    doctor_id   = Column(String(30),ForeignKey("doctor.doctor_id"))
+    spec_id     = Column(String(10),ForeignKey("specs.spec_id"))
 
 
 class Specialization(Base):
 
     __tablename__ = "specs"
 
-    spec_id     = Column(String(10),primary_key=True)
+    spec_id     = Column(Integer,primary_key=True)
     spec_name   = Column(String(30))
 
 class Patient(Base):
 
     __tablename__ = "patient"
 
-    cust_id     = Column(String(30))
+    cust_id     = Column(Integer,primary_key=True)
     username    = Column(String(100))
+    userhash    = Column(String(40))
 
 class Report(Base):
 
     __tablename__ = "reports"
 
-    report_id   = Column(String(40))
-    cust_id     = Column(String(30))
+    report_id   = Column(Integer,primary_key=True)
+    cust_id     = Column(Integer,ForeignKey("patient.cust_id"))
     report_filename     = Column(String(100))
