@@ -14,7 +14,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from rasa_sdk.forms import FormAction
 
-from demo_hospital.dbconnection.demo_hospital_db import *
+from dbconnection.demo_hospital_db import *
 
 
 class SpecList(Action):
@@ -26,6 +26,7 @@ class SpecList(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
+        specializations = session.query(Specialization)
         # userhash = tracker.get_slot("userhash")
         
 

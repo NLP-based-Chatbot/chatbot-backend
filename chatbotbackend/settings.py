@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'djoser',
     'accounts',
     'rest_framework_simplejwt.token_blacklist',
+    'chatbotportal'
 ]
 
 MIDDLEWARE = [
