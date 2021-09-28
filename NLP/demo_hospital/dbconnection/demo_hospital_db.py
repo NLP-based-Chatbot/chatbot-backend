@@ -31,10 +31,11 @@ class Doctor(Base):
     
     __tablename__ = "doctor"
     
-    doctor_id   =   Column(String(30),primary_key=True)
+    doctor_id   =   Column(Integer(),primary_key=True)
     initials    =   Column(String(10))
     first_name  =   Column(String(30))
     last_name   =   Column(String(30))
+    docthash    =   Column(String(40))
 
 
 class Appiontment(Base):
@@ -42,8 +43,8 @@ class Appiontment(Base):
     __tablename__ = "appointments"
 
     appointment_id  = Column(String(30),primary_key=True)
-    doctor_id       = Column(String(30),ForeignKey("doctor.doctor_id"))
-    cust_id         = Column(String(30),ForeignKey("pstirnt_cust_id"))
+    doctor_id       = Column(Integer(),ForeignKey("doctor.doctor_id"))
+    cust_id         = Column(Integer(),ForeignKey("pstirnt.cust_id"))
     time_slot       = Column(Time())
     date            = Column(Date())
 
@@ -51,10 +52,11 @@ class DoctorAvailable(Base):
 
     __tablename__ = "doctor_availability"
 
-    avbl_id         = Column(Integer(),primary_key=True)
-    docotr_id       = Column(String(30),ForeignKey("doctor.doctor_id"))
-    day_of_week     = Column(String(10))
-    time            = Column(Time())
+    avbl_id     = Column(Integer(),primary_key=True)
+    doctor_id   = Column(Integer(),ForeignKey("doctor.doctor_id"))
+    date        = Column(Date())
+    time_from   = Column(Time())
+    time_slot   = Column(Time())
 
 
 class DoctorSpec(Base):
@@ -62,15 +64,15 @@ class DoctorSpec(Base):
     __tablename__ = "doctor_specialization"
 
     d2s_id      = Column(Integer(),primary_key=True)
-    doctor_id   = Column(String(30),ForeignKey("doctor.doctor_id"))
-    spec_id     = Column(String(10),ForeignKey("specs.spec_id"))
+    doctor_id   = Column(Integer(),ForeignKey("doctor.doctor_id"))
+    spec_id     = Column(Integer(),ForeignKey("specs.spec_id"))
 
 
 class Specialization(Base):
 
     __tablename__ = "specs"
 
-    spec_id     = Column(Integer,primary_key=True)
+    spec_id     = Column(Integer(),primary_key=True)
     spec_name   = Column(String(30))
 
 class Patient(Base):
@@ -88,3 +90,4 @@ class Report(Base):
     report_id   = Column(Integer,primary_key=True)
     cust_id     = Column(Integer,ForeignKey("patient.cust_id"))
     report_filename     = Column(String(100))
+    reporthash  = Column(String(40))
