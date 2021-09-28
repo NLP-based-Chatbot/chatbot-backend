@@ -21,6 +21,7 @@ intents:
   - inform_relativetime
   - inform_userhash
   - inform_reporthash
+  - inform_docthash
 
 
 entities:
@@ -39,6 +40,7 @@ entities:
   - refer_after
   - refer_before
   - deliverable
+  - entry_id
 
 slots:
   option:
@@ -63,12 +65,13 @@ slots:
     type: text
   reporthash:
     type: text
+  entry_id:
+    type: text
 
 actions:
   - act_list_specilizations
   - act_list_doctors
-  - act_list_dates
-  - act_list_timeslots
+  - act_show_timerange
 
 
 responses:

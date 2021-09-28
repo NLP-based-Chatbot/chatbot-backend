@@ -56,7 +56,7 @@ class DoctorAvailable(Base):
     doctor_id   = Column(Integer(),ForeignKey("doctor.doctor_id"))
     date        = Column(Date())
     time_from   = Column(Time())
-    time_slot   = Column(Time())
+    time_to     = Column(Time())
 
 
 class DoctorSpec(Base):

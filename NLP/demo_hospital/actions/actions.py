@@ -26,9 +26,14 @@ class SpecList(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        specializations = session.query(Specialization)
-        # userhash = tracker.get_slot("userhash")
-        
+        specs = session.query(Specialization)
+
+        buttons = []
+
+        for row in specs:
+            buttons.append({"title":row.spec_name,"payload":"/"+str(row.spec_id)})
+
+        dispatcher.utter_button_message("Select the specialization you want", buttons)
 
         return []
 
@@ -41,35 +46,49 @@ class DoctorList(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        # userhash = tracker.get_slot("userhash")
-        
+        spec_id = tracker.get_slot("entry_id")
+
+        doctors = []
+
+        if spec_id != "" or spec_id != None:
+            # select doctors has no specialization
+            pass
+        else:
+            # select doctors with specific specialization
+            pass
+
+        buttons = []
+
+        for row in doctors:
+            buttons.append({"title": "Dr."+row.first_name+" "+row.last_name,"payload":"/"+str(row.docthash)})
+
+        dispatcher.utter_button_message("List of Doctors", buttons)
 
         return []
 
-class DateList(Action):
+class TimeRange(Action):
 
     def name(self) -> Text:
-        return "act_list_dates"
+        return "act_show_timerange"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        # userhash = tracker.get_slot("userhash")
-        
+        docthash = tracker.get_slot("docthash")
 
-        return []
+        selecteddoctor = None
 
-class TimeSlotList(Action):
+        if docthash!= "" or docthash!=None:
+            pass
+        else:
+            #fetch info about the doctor who is selected
+            pass
 
-    def name(self) -> Text:
-        return "act_list_timeslots"
+        timefrom = selecteddoctor.time_from
+        timeto= selecteddoctor.time_to
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        # userhash = tracker.get_slot("userhash")
-        
+        dispatcher.utter_message("Dr."+selecteddoctor.first_name+" "+selecteddoctor.last_name+"\
+             is available from "+timefrom+" to"+timeto+" . provide a easy time for you to meet the doctor")
 
         return []
