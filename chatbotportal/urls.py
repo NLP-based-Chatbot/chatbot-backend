@@ -7,7 +7,7 @@ from . import views
 
 urlpatterns = [
     path('healthcare/',csrf_exempt(views.assistant_healthcare)),
-    path('transport/',csrf_exempt(views.assistant_transport(request))),
-    path('telecom/',csrf_exempt(views.assistant_telecommunication(request))),
+    path('transport/',csrf_exempt(views.assistant_transport)),
+    path('telecom/',csrf_exempt(views.assistant_telecommunication)),
 ]
 

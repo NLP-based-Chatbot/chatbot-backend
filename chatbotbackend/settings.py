@@ -41,12 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'djoser',
+    "corsheaders",
     'accounts',
     'rest_framework_simplejwt.token_blacklist',
     'chatbotportal'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -76,6 +78,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'chatbotbackend.wsgi.application'
 
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
