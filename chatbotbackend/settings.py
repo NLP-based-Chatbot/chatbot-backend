@@ -44,7 +44,10 @@ INSTALLED_APPS = [
     "corsheaders",
     'accounts',
     'rest_framework_simplejwt.token_blacklist',
-    'chatbotportal'
+    'chatbotportal',
+    'airlines',
+    'healthcare',
+    'telecom',
 ]
 
 MIDDLEWARE = [
