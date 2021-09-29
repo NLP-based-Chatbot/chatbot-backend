@@ -1,0 +1,13 @@
+Requirement already satisfied: django in /home/zuko/.conda/envs/se5_chatterbot/lib/python3.7/site-packages (2.2.5)
+Collecting 3.1
+  Downloading 3-1-1.0.0.zip (882 bytes)
+Requirement already satisfied: pytz in /home/zuko/.conda/envs/se5_chatterbot/lib/python3.7/site-packages (from django) (2020.5)
+Requirement already satisfied: sqlparse in /home/zuko/.conda/envs/se5_chatterbot/lib/python3.7/site-packages (from django) (0.4.1)
+Building wheels for collected packages: 3.1
+  Building wheel for 3.1 (setup.py): started
+  Building wheel for 3.1 (setup.py): finished with status 'done'
+  Created wheel for 3.1: filename=3_1-1.0.0-py3-none-any.whl size=1339 sha256=035501e33f1c98c3374480e808a35cd1da0042ab99ded69e413e974cb545be64
+  Stored in directory: /home/zuko/.cache/pip/wheels/a5/be/1f/0cfa3e1c197209b9c5c097f0e1d8712e240e12713ae61c7345
+Successfully built 3.1
+Installing collected packages: 3.1
+Successfully installed 3.1-1.0.0
