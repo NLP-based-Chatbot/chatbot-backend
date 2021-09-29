@@ -56,14 +56,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',   
 ]
 
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000"
-# ]
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000"
+]
 
 CORS_ALLOW_CREDENTIALS = True
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000'
-]
 
 ROOT_URLCONF = 'chatbotbackend.urls'
 
@@ -171,7 +168,7 @@ SIMPLE_JWT = {
    'AUTH_HEADER_TYPES': ('JWT',),
 }
 
-DOMAIN = 'www.wingman.com'
+DOMAIN = 'localhost:3000'
 SITE_NAME = 'Wingman'
 
 DJOSER = {
