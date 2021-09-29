@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     "corsheaders",
     'accounts',
     'rest_framework_simplejwt.token_blacklist',
-    'chatbotportal'
+    'chatbotportal',
+    'feedback',
 ]
 
 MIDDLEWARE = [
@@ -94,7 +95,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME':'chatbot_wingman',
         'USER':'postgres',
-        'PASSWORD':'yazith',
+        'PASSWORD':'password',
         'HOST': 'localhost'
     }
 }
