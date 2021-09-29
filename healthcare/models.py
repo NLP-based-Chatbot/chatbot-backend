@@ -14,15 +14,15 @@ class Appiontment(models.Model):
     appointment_id  = models.AutoField(primary_key=True)
     doctor_id       = models.IntegerField()
     cust_id         = models.IntegerField()
-    time_slot       = Column(Time())
-    date            = Column(Date())
+    time_slot       = models.TimeField()
+    date            = models.DateField()
 
 class DoctorAvailable(models.Model):
     avbl_id     = models.AutoField(primary_key=True)
     doctor_id   = models.IntegerField()
-    date        = Column(Date())
-    time_from   = Column(Time())
-    time_to     = Column(Time())
+    date        = models.DateField()
+    time_from   = models.TimeField()
+    time_to     = models.TimeField()
 
 
 class DoctorSpec(models.Model):
@@ -46,4 +46,3 @@ class Report(models.Model):
     report_filename     = models.CharField(max_length=100)
     reporthash  = models.CharField(max_length=40)
 
-    
