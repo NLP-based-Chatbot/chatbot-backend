@@ -4,6 +4,3 @@ from django.views.generic import TemplateView
 
 from . import views
 
-urlpatterns=[
-    path('query/',csrf_exempt(views.runquery))
-]
