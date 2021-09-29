@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'accounts',
     'rest_framework_simplejwt.token_blacklist',
     'chatbotportal',
+    'feedback',
+    'transport',
     'healthcare',
     'telecom',
 ]
@@ -96,7 +98,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME':'chatbot_wingman',
         'USER':'postgres',
-        'PASSWORD':'yazith',
+        'PASSWORD':'password',
         'HOST': 'localhost'
     }
 }

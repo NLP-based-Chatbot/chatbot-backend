@@ -9,5 +9,6 @@ urlpatterns = [
     path('telecom/',include('telecom.urls')),
     path('healthcare/',include('healthcare.urls')),
     path('transport/',include('transport.urls')),
+    path('feedback/', include('feedback.urls'))
 ]
 
