@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-ca!*4)=)r0qlwowf=3_lu-3dfb$^5h-y72ka-z^$s-l)%!as%y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -55,8 +55,14 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',   
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000"
+]
+
+CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'chatbotbackend.urls'
 
@@ -88,7 +94,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME':'chatbot_wingman',
         'USER':'postgres',
-        'PASSWORD':'password',
+        'PASSWORD':'yazith',
         'HOST': 'localhost'
     }
 }
@@ -137,6 +143,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+CORS_ORIGIN_ALLOW_ALL = True
+
+ALLOWED_HOSTS = ['*']
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -163,7 +173,7 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('JWT',),
 }
 
-DOMAIN = 'www.wingman.com'
+DOMAIN = 'localhost:3000'
 SITE_NAME = 'Wingman'
 
 DJOSER = {
