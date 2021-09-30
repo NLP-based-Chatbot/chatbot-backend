@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'airlines',
     'healthcare',
     'telecom',
+    'feedback',
 ]
 
 MIDDLEWARE = [
@@ -97,7 +98,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME':'chatbot_wingman',
         'USER':'postgres',
-        'PASSWORD':'yazith',
+        'PASSWORD':'password',
         'HOST': 'localhost'
     }
 }

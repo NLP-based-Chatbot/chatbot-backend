@@ -14,15 +14,15 @@ class Appiontment(models.Model):
     appointment_id  = models.AutoField(primary_key=True)
     doctor_id       = models.IntegerField()
     cust_id         = models.IntegerField()
-    time_slot       = Column(Time())
-    date            = Column(Date())
+    # time_slot       = Column(Time())
+    # date            = Column(Date())
 
 class DoctorAvailable(models.Model):
     avbl_id     = models.AutoField(primary_key=True)
-    doctor_id   = models.IntegerField()
-    date        = Column(Date())
-    time_from   = Column(Time())
-    time_to     = Column(Time())
+    # doctor_id   = models.IntegerField()
+    # date        = Column(Date())
+    # time_from   = Column(Time())
+    # time_to     = Column(Time())
 
 
 class DoctorSpec(models.Model):
