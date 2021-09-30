@@ -5,6 +5,3 @@ from django.views.decorators.csrf import csrf_exempt
 
 from . import views
 
-urlpatterns=[
-    path('query/',csrf_exempt(views.runquery))
-]
