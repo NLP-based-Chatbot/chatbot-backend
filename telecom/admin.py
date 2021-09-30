@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from telecom.models import Packages
+
+admin.site.register(Packages)
