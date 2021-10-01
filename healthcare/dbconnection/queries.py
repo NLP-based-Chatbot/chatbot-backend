@@ -4,6 +4,8 @@ from django.http import JsonResponse,HttpResponse
 from django.core import serializers
 import json
 
+from healthcare import models
+
 map2func = {
     "speclist": speclist,
     "doctlist": doctlist,
@@ -19,9 +21,13 @@ def runquery(request):
 
     func_to_exc = querydata["function"]
 
+    result = func_to_exc(querydata)
+    result_json = serializers.serialize('json', result)
+
+    return HttpResponse(result_json, content_type='application/json')
 
     
-def speclist():
+def speclist(data):
     pass
 
 def doctlist(data):
@@ -40,11 +46,16 @@ def newappoint(data):
     time = data["time"]
     pass
 
-def changeappoint():
+def changeappoint(data):
+    appoint_id = data["appoint_id"]
+    date = data["date"]
+    time = data["time"]
     pass
 
-def deleteappoint():
+def deleteappoint(data):
+    appoint_id = data["appoint_id"]
     pass
 
-def listappoint():
+def listappoint(data):
+    cust_id = data["cust_id"]
     pass
