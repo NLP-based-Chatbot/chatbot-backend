@@ -11,6 +11,6 @@ urlpatterns = [
     path('feedback/', include('feedback.urls')),
     path('healthcare/',include('healthcare.urls')),
     path('telecom/',include('telecom.urls')),
-    path('transport/',include('transport.urls')),
+    path('airlines/',include('airlines.urls')),
 ]
 
