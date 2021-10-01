@@ -1,3 +1,28 @@
 from django.db import models
 
-# Create your models here.
+class Packages(models.Model):
+    SERVICE_PROVIDER = [
+        ('DG', 'dialog'),
+        ('MT', 'mobitel'),
+        ('HT', 'hutch'),
+        ('AT', 'airtel')
+    ]
+
+    PAYMENT_METHOD = [
+        ('PR', 'prepaid'),
+        ('PO', 'postpaid')
+    ]
+
+    PACKAGE_TYPE = [
+        ('VC', 'voice'),
+        ('DT', 'data'),
+        ('BB', 'broadband'),
+        ('TV', 'television')
+    ]
+
+    service_provider = models.CharField(max_length=2, choices=SERVICE_PROVIDER)
+    payment_method = models.CharField(max_length=2, choices=PAYMENT_METHOD )
+    package_type = models.CharField(max_length=2, choices=PACKAGE_TYPE)
+    package_name = models.CharField(max_length=100)
+    value = models.IntegerField()
+    description = models.CharField(max_length=255)
