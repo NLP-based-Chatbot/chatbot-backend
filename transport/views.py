@@ -11,4 +11,4 @@ def schedule_view(request, vehical_type, departure, destination):
       snippets = Schedules.objects.filter(vehical_type=vehical_type,destination=destination, departure=departure)
       serializer = ScheduleSerializer(snippets, many=True)
       
-      return JsonResponse(serializer.data, safe=False)
+      return JsonResponse(serializer.data, safe=False)   
