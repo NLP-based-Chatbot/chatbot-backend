@@ -5,10 +5,10 @@ from django.shortcuts import render
 from django.http import JsonResponse,HttpResponse
 from rest_framework.parsers import JSONParser
 
-def schedule_view(request, departure, destination):
+def schedule_view(request, vehical_type, departure, destination):
   if request.method == 'GET':
       print(departure, destination)
-      snippets = Schedules.objects.filter(destination=destination, departure=departure)
+      snippets = Schedules.objects.filter(vehical_type=vehical_type,destination=destination, departure=departure)
       serializer = ScheduleSerializer(snippets, many=True)
       
       return JsonResponse(serializer.data, safe=False)
