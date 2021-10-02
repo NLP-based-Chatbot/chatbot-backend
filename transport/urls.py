@@ -5,5 +5,5 @@ from django.views.decorators.csrf import csrf_exempt
 from . import views
 
 urlpatterns = [
-  path('schedule/', csrf_exempt(views.schedule_view))
+  path('schedule/<str:departure>/<str:destination>', csrf_exempt(views.schedule_view))
 ]
