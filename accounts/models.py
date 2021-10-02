@@ -30,7 +30,7 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     last_name =  models.CharField(max_length=255)
     email = models.EmailField(max_length=255, unique=True)
     is_active = models.BooleanField(default=True)
-    is_staff = models.BooleanField(default=False)
+    user_type = models.CharField(max_length=10, null=True)
     registered = models.DateTimeField(auto_now_add=True, null=True)
 
     objects = UserAccountManager()
