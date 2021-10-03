@@ -28,7 +28,6 @@ class Appiontment(models.Model):
 class DoctorAvailable(models.Model):
     avbl_id     = models.AutoField(primary_key=True)
     doctor_id   = models.ForeignKey(Doctor, on_delete=models.CASCADE)
-    date        = models.DateField()
     time_from   = models.TimeField()
     time_to     = models.TimeField()
 

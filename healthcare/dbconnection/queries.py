@@ -93,6 +93,18 @@ def listappoint(data):
     customer = Patient.objects.filter(cust_id=cust_id)
 
     return Appiontment.objects.filter(cust_id=customer[0].cust_id,date__gte=datetime.date.today())
+
+def docbyhash(data):
+    docthash = data["docthash"]
+
+    return Doctor.objects.filter(docthash=docthash)
+
+def docavlbl(data):
+    docthash = data["docthash"]
+
+    doct_id = Doctor.objects.filter(docthash=docthash)[0].doctor_id
+
+    return DoctorAvailable.objects.filter(doctor_id=doct_id)
     
 
 
@@ -103,6 +115,8 @@ map2func = {
     "changeappoint": changeappoint,
     "deleteappoint": deleteappoint,
     "listappoint": listappoint,
+    "docbyhash": docbyhash,
+    "docavlbl": docavlbl
 }
 
 def runquery(request):
