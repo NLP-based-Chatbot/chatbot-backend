@@ -10,6 +10,8 @@ urlpatterns = [
     path('assistant/',include('chatbotportal.urls')),
     path('feedback/', include('feedback.urls')),
     path('packages/', include('telecom.urls')),
+    path('healthcare/',include('healthcare.urls')),
+    path('telecom/',include('telecom.urls')),
     path('transport/', include('transport.urls'))
 ]
 

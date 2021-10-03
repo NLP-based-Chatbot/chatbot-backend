@@ -1,8 +1,13 @@
 from telecom.serializer import PackageSerializer
 from telecom.models import Packages
 from django.shortcuts import render
+import requests
 from django.http import JsonResponse,HttpResponse
-from rest_framework.parsers import JSONParser
+
+
+def runquery(request):
+    querydata=request.body
+    
 
 def packages_view(request, service_provider, payment_method, package_type):
     if request.method == 'GET':
