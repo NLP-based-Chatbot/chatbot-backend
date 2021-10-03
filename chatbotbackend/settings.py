@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'airlines',
     'healthcare',
     'telecom',
+    'transport',
     'feedback',
 ]
 
