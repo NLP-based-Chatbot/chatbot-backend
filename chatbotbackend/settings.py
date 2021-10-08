@@ -180,6 +180,7 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'AUTH_HEADER_TYPES': ('JWT',),
+    'UPDATE_LAST_LOGIN': True,
 }
 
 DOMAIN = 'localhost:3000'
@@ -198,9 +199,10 @@ DJOSER = {
     'USERNAME_RESET_CONFIRM_URL': 'email/reset/confirm/{uid}/{token}',
     'ACTIVATION_URL':'activate/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL': True,
-    'SERIALIZER': {
+    "CREATE_SESSION_ON_LOGIN": True,
+    'SERIALIZERS': {
         'user_create':'accounts.serializers.UserCreateSerializer',
-        'user' : 'accounts.serializers.UserCreateSerializer',
+        'user' : 'accounts.serializers.UserSerializer',
         'user_delete':'djoser.serializers.UserDeleteSerializer'
     },
     'EMAIL': {
