@@ -7,3 +7,4 @@ class Feedback(models.Model):
     domain = models.CharField(max_length=100)
     rating = models.IntegerField()
     chatsession = models.JSONField()
+    feedback = models.CharField(max_length=200)
