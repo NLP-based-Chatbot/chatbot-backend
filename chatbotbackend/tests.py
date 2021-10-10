@@ -1,31 +1,8 @@
-import json
-from django.contrib.auth.models import User
-from django.urls import reverse
-from rest_framework_simplejwt.tokens import Token
 from rest_framework.test import APITestCase
 from rest_framework import status
 from accounts.models import UserAccount
-from accounts.serializers import UserCreateSerializer
 import pdb
 
-class TestSetup(APITestCase):
-    def setUp(self):
-        self.register_data = {  "first_name" : "testuser", 
-                                "last_name" : "test",
-                                "email" : "test@gmail.com",
-                                "password" : "strongPassword123",
-                                "re_password": "strongPassword123" }
-        self.login_data = { "email" : "test@gmail.com",
-                            "password" : "strongPassword123"}                 
-
-        self.register_url = "/auth/users/"
-        self.login_url = "/auth/jwt/create/"
-
-        return super().setUp()
-
-    def tearDown(self):
-        return super().tearDown()
-    
 class AccountRegisterTestCase(APITestCase):
     def setUp(self):
         self.register_data = {  "first_name" : "testuser", 
