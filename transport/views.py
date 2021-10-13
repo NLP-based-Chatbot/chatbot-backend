@@ -7,9 +7,10 @@ from django.http import JsonResponse,HttpResponse
 from rest_framework.parsers import JSONParser
 
 @api_view(['GET', 'POST'])
-def schedule_view(request):
+def schedule_view(request, vehical_type, departure, destination):
   if request.method == 'GET':
-      snippets = Schedules.objects().all()
+      print(departure, destination)
+      snippets = Schedules.objects.filter(vehical_type=vehical_type,destination=destination, departure=departure)
       serializer = ScheduleSerializer(snippets, many=True)
       
-      return JsonResponse(serializer.data, safe=False)
+      return JsonResponse(serializer.data, safe=False)   

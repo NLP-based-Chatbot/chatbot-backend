@@ -6,5 +6,6 @@ class Feedback(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     domain = models.CharField(max_length=100)
     rating = models.IntegerField()
+    feedback = models.CharField(max_length=200, null=True)
     chatsession = models.JSONField()
     feedback = models.CharField(max_length=200)
