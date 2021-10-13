@@ -8,3 +8,4 @@ class Feedback(models.Model):
     rating = models.IntegerField()
     feedback = models.CharField(max_length=200, null=True)
     chatsession = models.JSONField()
+    feedback = models.CharField(max_length=200)
