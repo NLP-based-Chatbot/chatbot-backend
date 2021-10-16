@@ -1,0 +1,4 @@
+{
+	"appService.defaultWebAppToDeploy": "/subscriptions/48ab22f7-35e9-4c1a-9670-fdb6fe5353a3/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/wingman-chatbot",
+	"appService.deploySubpath": "."
+}
