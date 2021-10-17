@@ -5,6 +5,8 @@ from django.core import serializers
 import json
 import datetime
 
+import random,string
+
 from healthcare.models import *
 
 def speclist(data):
@@ -106,7 +108,19 @@ def docavlbl(data):
 
     return DoctorAvailable.objects.filter(doctor_id=doct_id)
     
+def newpatient(data):
+    username = data["username"]
 
+    randchars = string.ascii_lowercase +string.digits*3
+    userhash = ''.join(random.choice(randchars) for i in range(35))
+
+    newuser = Patient(userhash=userhash,username=username)
+
+    try:
+        newuser.save()
+        return Patient.objects.filter(userhash=userhash)
+    except Exception as e:
+        return '[{"query_success":"0","error":'+str(e)+'}]'
 
 map2func = {
     "speclist": speclist,
@@ -116,7 +130,8 @@ map2func = {
     "deleteappoint": deleteappoint,
     "listappoint": listappoint,
     "docbyhash": docbyhash,
-    "docavlbl": docavlbl
+    "docavlbl": docavlbl,
+    "newpatient": newpatient
 }
 
 def runquery(request):
