@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ca!*4)=)r0qlwowf=3_lu-3dfb$^5h-y72ka-z^$s-l)%!as%y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -104,7 +104,9 @@ DATABASES = {
         'NAME': env('DATABASE_NAME'),
         'USER':env('DATABASE_USER'),
         'PASSWORD':env('DATABASE_PASSWORD'),
-        'HOST': env('DATABASE_HOST')
+        'HOST': env('DATABASE_HOST'),
+        'PORT': env('DATABASE_PORT'),
+        'OPTIONS': {"sslmode": "require"}
     }
 }
 
