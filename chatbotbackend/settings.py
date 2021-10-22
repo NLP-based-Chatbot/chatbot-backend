@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-ca!*4)=)r0qlwowf=3_lu-3dfb$^5h-y72ka-z^$s-l)%!as%y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://wingman-chatbot.azurewebsites.net']
 
 
 # Application definition
@@ -68,7 +68,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000"
+    "http://localhost:3000",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
