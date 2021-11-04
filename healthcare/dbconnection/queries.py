@@ -5,6 +5,9 @@ from django.core import serializers
 import json
 import datetime
 
+import random
+import string
+
 from healthcare.models import *
 
 def speclist(data):
@@ -89,24 +92,32 @@ def deleteappoint(data):
 
 def listappoint(data):
     cust_id = data["cust_id"]
-
     customer = Patient.objects.filter(cust_id=cust_id)
-
     return Appiontment.objects.filter(cust_id=customer[0].cust_id,date__gte=datetime.date.today())
 
 def docbyhash(data):
     docthash = data["docthash"]
-
     return Doctor.objects.filter(docthash=docthash)
 
 def docavlbl(data):
     docthash = data["docthash"]
-
     doct_id = Doctor.objects.filter(docthash=docthash)[0].doctor_id
-
     return DoctorAvailable.objects.filter(doctor_id=doct_id)
     
+def clientdata(data):
+    userhash = data["userhash"]
+    return Patient.objects.filter(userhash=userhash)
 
+def newpatient(data):
+    username = data["username"]
+    userhash = ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(25))
+
+    try:
+        new_patient = Patient(username=username,userhash=userhash)
+        new_patient.save()
+        return Patient.objects.filter(userhash=userhash)
+    except Exception as e:
+        return '[{"query_success":"0","error":'+str(e)+'}]'
 
 map2func = {
     "speclist": speclist,
@@ -116,7 +127,9 @@ map2func = {
     "deleteappoint": deleteappoint,
     "listappoint": listappoint,
     "docbyhash": docbyhash,
-    "docavlbl": docavlbl
+    "docavlbl": docavlbl,
+    "clientdata": clientdata,
+    "newpatient": newpatient,
 }
 
 def runquery(request):
