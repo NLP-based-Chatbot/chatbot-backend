@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 from datetime import timedelta
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +31,7 @@ SECRET_KEY = 'django-insecure-ca!*4)=)r0qlwowf=3_lu-3dfb$^5h-y72ka-z^$s-l)%!as%y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,20 +45,32 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'djoser',
+    "corsheaders",
     'accounts',
     'rest_framework_simplejwt.token_blacklist',
-    'chatbotportal'
+    'chatbotportal',
+    'healthcare',
+    'telecom',
+    'transport',
+    'feedback',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',   
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000"
+]
+
+CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'chatbotbackend.urls'
 
@@ -76,6 +92,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'chatbotbackend.wsgi.application'
 
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -83,10 +100,16 @@ WSGI_APPLICATION = 'chatbotbackend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'chatbot_wingman',
-        'USER':'postgres',
-        'PASSWORD':'password',
-        'HOST': 'localhost'
+        'NAME': env('DATABASE_NAME'),
+        'USER':env('DATABASE_USER'),
+        'PASSWORD':env('DATABASE_PASSWORD'),
+        'HOST': env('DATABASE_HOST'),
+        'TEST':{
+            'NAME': env('TEST_DATABASE_NAME'),
+            'USER':env('TEST_DATABASE_USER'),
+            'PASSWORD':env('TEST_DATABASE_PASSWORD'),
+            'HOST': env('TEST_DATABASE_HOST'),
+        }
     }
 }
 
@@ -134,6 +157,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+CORS_ORIGIN_ALLOW_ALL = True
+
+ALLOWED_HOSTS = ['*']
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -147,7 +174,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication'
+        'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -158,9 +185,10 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'AUTH_HEADER_TYPES': ('JWT',),
+    'UPDATE_LAST_LOGIN': True,
 }
 
-DOMAIN = 'www.wingman.com'
+DOMAIN = 'localhost:3000'
 SITE_NAME = 'Wingman'
 
 DJOSER = {
@@ -176,9 +204,11 @@ DJOSER = {
     'USERNAME_RESET_CONFIRM_URL': 'email/reset/confirm/{uid}/{token}',
     'ACTIVATION_URL':'activate/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL': True,
-    'SERIALIZER': {
+    "CREATE_SESSION_ON_LOGIN": True,
+    'SERIALIZERS': {
         'user_create':'accounts.serializers.UserCreateSerializer',
-        'user' : 'accounts.serializers.UserCreateSerializer',
+        'user' : 'accounts.serializers.UserSerializer',
+        'current_user' : 'accounts.serializers.UserSerializer',
         'user_delete':'djoser.serializers.UserDeleteSerializer'
     },
     'EMAIL': {
