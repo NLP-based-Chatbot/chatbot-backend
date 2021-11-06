@@ -8,4 +8,4 @@ class NewsSerializer(serializers.ModelSerializer):
 class InstructionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Instruction
-        fields = ['domain', 'label', 'body']
+        fields = ['id', 'domain', 'label', 'body']
