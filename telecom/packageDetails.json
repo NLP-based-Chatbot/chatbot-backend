@@ -1,0 +1,582 @@
+[
+    {
+        "model" : "telecom.Packages",
+        "pk" : 1,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "content-based",
+            "package_name" : "Dialog Fun Blaster Rs. 97",
+            "value" : 97,
+            "description" : "Rs. 97 (Inclusive of Taxes) Unlimited Facebook, WhatsApp & YouTube | Validity 7 Days",
+            "activation_method" : "Dial #678#  -> Mobile Data Plans -> Fun Blaster <Select the related package> > Activate | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#funblaster"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 2,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "content-based",
+            "package_name" : "Dialog Fun Blaster Rs. 98",
+            "value" : 98,
+            "description" : "Rs. 98 (Inclusive of Taxes) Facebook, WhatsApp, Instagram & Spotify | 5GB Data (SD Quality) | Validity 14 Days",
+            "activation_method" : "Dial #678#  -> Mobile Data Plans -> Fun Blaster <Select the related package> > Activate | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#funblaster"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 3,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "content-based",
+            "package_name" : "Dialog Fun Blaster Rs. 347",
+            "value" : 347,
+            "description" : "Rs. 347 (Inclusive of Taxes) Unlimited Facebook, WhatsApp & YouTube | Additional Data 2GB (Anytime Data : 1GB Night Bonus Data : 1GB) | Validity 30 Days",
+            "activation_method" : "Dial #678#  -> Mobile Data Plans -> Fun Blaster <Select the related package> > Activate | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#funblaster"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 4,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "unlimited",
+            "package_name" : "Unlimited Netflix On Your Dialog Mobile Rs.590",
+            "value" : 590,
+            "description" : "Netflix Unlimited (SD Quality (Upto 4Mbps)) | Validity 7 Days",
+            "activation_method" : "Dial #678# to Activate | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#unlimitednetflix"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 5,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "unlimited",
+            "package_name" : "Unlimited Netflix On Your Dialog Mobile Rs.790",
+            "value" : 790,
+            "description" : "Netflix Unlimited (HD Quality (Upto 8Mbps)) | Validity 7 Days",
+            "activation_method" : "Dial #678# to Activate | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#unlimitednetflix"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 6,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "unlimited",
+            "package_name" : "Unlimited Netflix On Your Dialog Mobile Rs.1490",
+            "value" : 1490,
+            "description" : "Netflix Unlimited (SD Quality (Upto 4Mbps)) | Validity 30 Days",
+            "activation_method" : "Dial #678# to Activate | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#unlimitednetflix"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 7,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "unlimited",
+            "package_name" : "Unlimited Netflix On Your Dialog Mobile Rs.1990",
+            "value" : 1990,
+            "description" : "Netflix Unlimited (HD Quality (Upto 8Mbps)) | Validity 30 Days",
+            "activation_method" : "Dial #678# to Activate | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#unlimitednetflix"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 8,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "unlimited",
+            "package_name" : "Unlimited Data Plan Rs.200",
+            "value" : 200,
+            "description" : "Unlimited @ 1Mbps | Validity 1 Day",
+            "activation_method" : "Dial #678#, go to Mobile Data Plans and select All Unlimited Data Plans | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#unlimitedpacks"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 9,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "unlimited",
+            "package_name" : "Unlimited Data Plan Rs.350",
+            "value" : 350,
+            "description" : "Unlimited @ 1Mbps | Validity 3 Days",
+            "activation_method" : "Dial #678#, go to Mobile Data Plans and select All Unlimited Data Plans | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#unlimitedpacks"
+        }
+    }
+    ,
+    {
+        "model" : "telecom.Packages",
+        "pk" : 10,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "unlimited",
+            "package_name" : "Unlimited Data Plan Rs.500",
+            "value" : 500,
+            "description" : "Unlimited @ 1Mbps | Validity 7 Days",
+            "activation_method" : "Dial #678#, go to Mobile Data Plans and select All Unlimited Data Plans | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#unlimitedpacks"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 11,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "unlimited",
+            "package_name" : "Unlimited Data Plan Rs.1300",
+            "value" : 1300,
+            "description" : "Unlimited @ 1Mbps | Validity 30 Days",
+            "activation_method" : "Dial #678#, go to Mobile Data Plans and select All Unlimited Data Plans | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#unlimitedpacks"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 12,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "unlimited",
+            "package_name" : "Unlimited Data Plan Rs.360",
+            "value" : 360,
+            "description" : "Unlimited @ 2Mbps | Validity 1 Day",
+            "activation_method" : "Dial #678#, go to Mobile Data Plans and select All Unlimited Data Plans | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#unlimitedpacks"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 13,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "unlimited",
+            "package_name" : "Unlimited Data Plan Rs.600",
+            "value" : 600,
+            "description" : "Unlimited @ 2Mbps | Validity 3 Days",
+            "activation_method" : "Dial #678#, go to Mobile Data Plans and select All Unlimited Data Plans | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#unlimitedpacks"
+        }
+    }
+    ,
+    {
+        "model" : "telecom.Packages",
+        "pk" : 14,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "unlimited",
+            "package_name" : "Unlimited Data Plan Rs.900",
+            "value" : 900,
+            "description" : "Unlimited @ 2Mbps | Validity 7 Days",
+            "activation_method" : "Dial #678#, go to Mobile Data Plans and select All Unlimited Data Plans | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#unlimitedpacks"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 15,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "unlimited",
+            "package_name" : "Unlimited Data Plan Rs.2300",
+            "value" : 2300,
+            "description" : "Unlimited @ 2Mbps | Validity 30 Days",
+            "activation_method" : "Dial #678#, go to Mobile Data Plans and select All Unlimited Data Plans | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#unlimitedpacks"
+        }
+    }
+    ,
+    {
+        "model" : "telecom.Packages",
+        "pk" : 16,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "unlimited",
+            "package_name" : "Unlimited Data Plan Rs.660",
+            "value" : 660,
+            "description" : "Unlimited @ 4Mbps | Validity 1 Day",
+            "activation_method" : "Dial #678#, go to Mobile Data Plans and select All Unlimited Data Plans | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#unlimitedpacks"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 17,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "unlimited",
+            "package_name" : "Unlimited Data Plan Rs.1150",
+            "value" : 1150,
+            "description" : "Unlimited @ 4Mbps | Validity 3 Days",
+            "activation_method" : "Dial #678#, go to Mobile Data Plans and select All Unlimited Data Plans | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#unlimitedpacks"
+        }
+    }
+    ,
+    {
+        "model" : "telecom.Packages",
+        "pk" : 18,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "unlimited",
+            "package_name" : "Unlimited Data Plan Rs.1650",
+            "value" : 1650,
+            "description" : "Unlimited @ 4Mbps | Validity 7 Days",
+            "activation_method" : "Dial #678#, go to Mobile Data Plans and select All Unlimited Data Plans | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#unlimitedpacks"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 19,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "unlimited",
+            "package_name" : "Unlimited Data Plan Rs.4300",
+            "value" : 4300,
+            "description" : "Unlimited @ 4Mbps | Validity 30 Days",
+            "activation_method" : "Dial #678#, go to Mobile Data Plans and select All Unlimited Data Plans | For more details visit https://www.dialog.lk/mobile-broadband-prepaid-packages#unlimitedpacks"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 20,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "anytime",
+            "package_name" : "Anytime data Add-Ons",
+            "value" : 60,
+            "description" : "Anytime 1GB | Validity 1 Day | Rs.80 + tax for validity 7 days | Rs.100 + tax for validity 30 days",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/ADDD1/"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 21,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "anytime",
+            "package_name" : "Anytime data Add-Ons",
+            "value" : 100,
+            "description" : "Anytime 2GB | Validity 1 Day | Rs.140 + tax for validity 7 days | Rs.180 + tax for validity 30 days",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/ADDD2/"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 22,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "anytime",
+            "package_name" : "Anytime data Add-Ons",
+            "value" : 225,
+            "description" : "Anytime 5GB | Validity 1 Day | Rs.140 + tax for validity 7 days | Rs.180 + tax for validity 30 days",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/ADDD5/"
+        }
+    }
+    ,
+    {
+        "model" : "telecom.Packages",
+        "pk" : 23,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "anytime",
+            "package_name" : "Anytime data Add-Ons",
+            "value" : 350,
+            "description" : "Anytime 10GB | Validity 1 Day | Rs.140 + tax for validity 7 days | Rs.180 + tax for validity 30 days",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/ADDD10/"
+        }
+    }
+    ,
+    {
+        "model" : "telecom.Packages",
+        "pk" : 24,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "anytime",
+            "package_name" : "Anytime data Add-Ons",
+            "value" : 450,
+            "description" : "Anytime 15GB | Validity 1 Day | Rs.140 + tax for validity 7 days | Rs.180 + tax for validity 30 days",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/ADDD15/"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 25,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "anytime",
+            "package_name" : "Anytime data Add-Ons",
+            "value" : 600,
+            "description" : "Anytime 25GB | Validity 1 Day | Rs.140 + tax for validity 7 days | Rs.180 + tax for validity 30 days",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/ADDD25/"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 26,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "content-based",
+            "package_name" : "Anytime Data Video Conferencing",
+            "value" : 165,
+            "description" : "25GB | Validity 30 Days | Video Conferencing Plans Special Data Packs for Office 365 & Zoom",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/IC165/"
+        }
+    }
+    ,
+    {
+        "model" : "telecom.Packages",
+        "pk" : 27,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "content-based",
+            "package_name" : "Anytime Data Video Conferencing",
+            "value" : 540,
+            "description" : "Unlimited | SD Quality | Validity 30 Days | Video Conferencing Plans Special Data Packs for Office 365 & Zoom",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/IC540/"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 28,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "content-based",
+            "package_name" : "Anytime Work & Learn Packs",
+            "value" : 495,
+            "description" : "12GB | Validity 30 Days | Extra Charges : Rs. 0.30 + tax per MB | Zoom, Google, Microsoft, YouTube, Education Apps and Web Browsing @ Amazing Rates. The Special Rates for Work & Learn Applications are Applicable ALL DAY.",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/IC495/"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 29,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "content-based",
+            "package_name" : "Anytime Work & Learn Packs",
+            "value" : 995,
+            "description" : "30GB | Validity 30 Days | Extra Charges : Rs. 0.30 + tax per MB | Zoom, Google, Microsoft, YouTube, Education Apps and Web Browsing @ Amazing Rates. The Special Rates for Work & Learn Applications are Applicable ALL DAY.",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/IC995/"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 30,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "anytime",
+            "package_name" : "Anytime Data",
+            "value" : 59,
+            "description" : "0.5GB Anytime + 0.25GB Anytime 4G | Validity 7 Days | Extra Charges : Rs. 0.30 + tax per MB | Anytime Data Plans allow Dialog customers to access the internet anytime with additional 4G bonus.",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/IC59/"
+        }
+    }, {
+        "model" : "telecom.Packages",
+        "pk" : 31,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "anytime",
+            "package_name" : "Anytime Data",
+            "value" : 119,
+            "description" : "1GB Anytime + 0.5GB Anytime 4G | Validity 14 Days | Extra Charges : Rs. 0.30 + tax per MB | Anytime Data Plans allow Dialog customers to access the internet anytime with additional 4G bonus.",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/IC119/"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 32,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "anytime",
+            "package_name" : "Anytime Data",
+            "value" : 219,
+            "description" : "2GB Anytime + 1GB Anytime 4G | Validity 30 Days | Extra Charges : Rs. 0.30 + tax per MB | Anytime Data Plans allow Dialog customers to access the internet anytime with additional 4G bonus.",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/IC219/"
+        }
+    },{
+        "model" : "telecom.Packages",
+        "pk" : 33,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "anytime",
+            "package_name" : "Anytime Data",
+            "value" : 399,
+            "description" : "4GB Anytime + 2GB Anytime 4G | Validity 30 Days | Extra Charges : Rs. 0.30 + tax per MB | Anytime Data Plans allow Dialog customers to access the internet anytime with additional 4G bonus.",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/IC399/"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 34,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "anytime",
+            "package_name" : "Anytime Data",
+            "value" : 999,
+            "description" : "10GB Anytime + 5GB Anytime 4G | Validity 30 Days | Extra Charges : Rs. 0.30 + tax per MB | Anytime Data Plans allow Dialog customers to access the internet anytime with additional 4G bonus.",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/IC999/"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 35,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "content-based",
+            "package_name" : "4G Video Blaster with Unlimited YouTube",
+            "value" : 249,
+            "description" : "Unlimited YouTube | Anytime 1.4GB | Free data bonus 2.1GB | Validity 30 Days | Extra Charges : Rs. 0.30 + tax per MB | Unlimited plans that allows Dialog customers to enjoy Unlimited YouTube along with an additional data quota for all the other internet usage. In addition to the above, streaming for ViU App will be free of charge.",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/IC249/"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 36,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "datacard",
+            "package_name" : "Internet Cards",
+            "value" : 29,
+            "description" : "Anytime 165MB | Free data bonus 247.5MB | Anytime 4G Bonus 82.5MB | Night Bonus 165MB | Validity 3 Days | Extra Charges : Rs. 0.30 + tax per MB",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/IC29/"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 37,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "datacard",
+            "package_name" : "Internet Cards",
+            "value" : 49,
+            "description" : "Anytime 330MB | Free data bonus 495MB | Anytime 4G Bonus 165MB | Night Bonus 330MB | Validity 7 Days | Extra Charges : Rs. 0.30 + tax per MB",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/IC49/"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 38,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "datacard",
+            "package_name" : "Internet Cards",
+            "value" : 99,
+            "description" : "Anytime 660MB | Free data bonus 990MB | Anytime 4G Bonus 330MB | Night Bonus 660MB | Validity 21 Days | Extra Charges : Rs. 0.30 + tax per MB",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/IC99/"
+        }
+    }
+    ,
+    {
+        "model" : "telecom.Packages",
+        "pk" : 39,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "datacard",
+            "package_name" : "Internet Cards",
+            "value" : 199,
+            "description" : "Anytime 1.43GB | Free data bonus 2.14GB | Anytime 4G Bonus 0.71GB | Night Bonus 1.43GB | Validity 30 Days | Extra Charges : Rs. 0.30 + tax per MB",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/IC199/"
+        }
+    }
+    ,
+    {
+        "model" : "telecom.Packages",
+        "pk" : 40,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "time-based",
+            "package_name" : "Time Based Packages",
+            "value" : 20,
+            "description" : "First 500MB without speed cap | Validity 1 Hour | Extra Charges : Rs. 0.30 + tax per MB",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/T20/"
+        }
+    }
+    ,
+    {
+        "model" : "telecom.Packages",
+        "pk" : 41,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "time-based",
+            "package_name" : "Time Based Packages",
+            "value" : 60,
+            "description" : "First 1GB without speed cap | Validity 4 Hour | Extra Charges : Rs. 0.30 + tax per MB",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/T60/"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 42,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "time-based",
+            "package_name" : "Time Based Packages",
+            "value" : 100,
+            "description" : "First 2GB without speed cap | Validity 2 days | Extra Charges : Rs. 0.30 + tax per MB",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/T100/"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 43,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "time-based",
+            "package_name" : "Time Based Packages",
+            "value" : 200,
+            "description" : "First 4GB without speed cap | Validity 5 days | Extra Charges : Rs. 0.30 + tax per MB",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/T200/"
+        }
+    },
+    {
+        "model" : "telecom.Packages",
+        "pk" : 44,
+        "fields" : {
+            "service_provider" : "dialog",
+            "payment_method" : "prepaid",
+            "package_type" : "time-based",
+            "package_name" : "Time Based Packages",
+            "value" : 400,
+            "description" : "First 8GB without speed cap | Validity 10 days | Extra Charges : Rs. 0.30 + tax per MB",
+            "activation_method" : "http://sm.dialog.lk/data/pkg/T400/"
+        }
+    }
+]

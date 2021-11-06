@@ -6,6 +6,8 @@ from django.views.decorators.csrf import csrf_exempt
 from . import views
 
 urlpatterns = [
-    path('<str:service_provider>/<str:payment_method>/<str:package_type>',csrf_exempt(views.packages_view)),
+    path('packages/<str:service_provider>/<str:payment_method>/<str:package_type>',csrf_exempt(views.packages_view)),
+    path('details/<str:detail_type>/<str:service_provider>/<str:payment_method>',csrf_exempt(views.provider_specific_details_view)),
+    path('complaint/',csrf_exempt(views.complaint_view)),
 ]
 
