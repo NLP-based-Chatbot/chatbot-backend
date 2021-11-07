@@ -110,7 +110,7 @@ def clientdata(data):
 
 def newpatient(data):
     username = data["username"]
-    userhash = ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(25))
+    userhash = "usr_"+''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(25))
 
     try:
         new_patient = Patient(username=username,userhash=userhash)
