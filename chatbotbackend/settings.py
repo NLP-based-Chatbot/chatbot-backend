@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'telecom',
     'transport',
     'feedback',
+    'newsfeed',
 ]
 
 MIDDLEWARE = [
