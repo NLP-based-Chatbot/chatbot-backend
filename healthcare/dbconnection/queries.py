@@ -134,13 +134,15 @@ def placemedtest(data):
     cust_id = data["cust_id"]
     date = data["date"]
     time = data["time"]
+    test_type = data["test_type"]
 
     cust = Patient.objects.get(cust_id=cust_id)
 
     medtest = MedicalTest(
         cust_id_id=cust.cust_id,
         date=date,
-        time_slot= time
+        time_slot= time,
+        test_type=test_type
     )
     
     try:
@@ -149,6 +151,10 @@ def placemedtest(data):
     except Exception as e:
         return '[{"query_success":"0","error":'+str(e)+'}]'
 
+def listmedtest(data):
+    cust_id = data["cust_id"]
+    customer = Patient.objects.filter(cust_id=cust_id)
+    return MedicalTest.objects.filter(cust_id=customer[0].cust_id,date__gte=datetime.date.today())
 
 def makecomplain(data):
     title = data["title"]
@@ -186,6 +192,7 @@ map2func = {
     "downloadreport":downloadreport,
     "makecomplain":makecomplain,
     "placemedtest":placemedtest,
+    "listmedtest":listmedtest,
 }
 
 def runquery(request):
