@@ -45,4 +45,8 @@ class Report(models.Model):
     report_filename     = models.CharField(max_length=100)
     reporthash  = models.CharField(max_length=40)
 
-    
+class MedicalTest(models.Model):
+    medtest_id  = models.AutoField(primary_key=True)
+    cust_id     = models.ForeignKey(Patient, on_delete=models.CASCADE)
+    time_slot   = models.TimeField()
+    date        = models.DateField()

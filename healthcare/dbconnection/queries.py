@@ -128,10 +128,7 @@ def downloadreport(data):
     cust_id = data["cust_id"]
     reporthash = data["reporthash"]
     customer = Patient.objects.filter(cust_id=cust_id)
-    needed_report = Report.objects.filter(cust_id=customer[0].cust_id,reporthash=reporthash)
-    needed_report = json.loads(needed_report)
-
-    report_filename = needed_report[0]["fields"] 
+    return Report.objects.filter(cust_id=customer[0].cust_id,reporthash=reporthash)
 
 map2func = {
     "speclist": speclist,
