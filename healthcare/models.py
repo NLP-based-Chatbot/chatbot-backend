@@ -50,3 +50,10 @@ class MedicalTest(models.Model):
     cust_id     = models.ForeignKey(Patient, on_delete=models.CASCADE)
     time_slot   = models.TimeField()
     date        = models.DateField()
+
+class Complaint(models.Model):
+    title = models.CharField(max_length=50)
+    description = models.CharField(max_length=200)
+    name = models.CharField(max_length=100)
+    contact_no = models.CharField(max_length=20)
+    email = models.CharField(max_length=50)
