@@ -8,6 +8,6 @@ from .dbconnection import queries
 
 urlpatterns= [
     path('query/',csrf_exempt(queries.runquery)),
-    path('report/<slug:report_filename>/',csrf_exempt(views.download_report))
+    path('report/<slug:report_filename>/',csrf_exempt(views.download_report)),
 ]
 

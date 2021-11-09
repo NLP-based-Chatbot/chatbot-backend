@@ -130,6 +130,47 @@ def downloadreport(data):
     customer = Patient.objects.filter(cust_id=cust_id)
     return Report.objects.filter(cust_id=customer[0].cust_id,reporthash=reporthash)
 
+def placemedtest(data):
+    cust_id = data["cust_id"]
+    date = data["date"]
+    time = data["time"]
+
+    cust = Patient.objects.get(cust_id=cust_id)
+
+    medtest = MedicalTest(
+        cust_id_id=cust.cust_id,
+        date=date,
+        time_slot= time
+    )
+    
+    try:
+        medtest.save()
+        return '[{"query_success":"1"}]'
+    except Exception as e:
+        return '[{"query_success":"0","error":'+str(e)+'}]'
+
+
+def makecomplain(data):
+    title = data["title"]
+    description = data["description"]
+    name = data["name"]
+    contact_no = data["contact_no"]
+    email = data["email"]
+    
+    complaint = Complaint(
+        title=title,
+        description=description,
+        name=name,
+        contact_no=contact_no,
+        email=email
+    )
+    
+    try:
+        complaint.save()
+        return '[{"query_success":"1"}]'
+    except Exception as e:
+        return '[{"query_success":"0","error":'+str(e)+'}]'
+
 map2func = {
     "speclist": speclist,
     "doctlist": doctlist,
@@ -143,6 +184,8 @@ map2func = {
     "newpatient": newpatient,
     "listreports": listreports,
     "downloadreport":downloadreport,
+    "makecomplain":makecomplain,
+    "placemedtest":placemedtest,
 }
 
 def runquery(request):
@@ -159,5 +202,3 @@ def runquery(request):
         result_json = result
 
     return HttpResponse(result_json, content_type='application/json')
-
-    
