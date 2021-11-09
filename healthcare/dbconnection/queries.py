@@ -119,6 +119,20 @@ def newpatient(data):
     except Exception as e:
         return '[{"query_success":"0","error":'+str(e)+'}]'
 
+def listreports(data):
+    cust_id = data["cust_id"]
+    customer = Patient.objects.filter(cust_id=cust_id)
+    return Report.objects.filter(cust_id=customer[0].cust_id,date__gte=datetime.date.today())
+
+def downloadreport(data):
+    cust_id = data["cust_id"]
+    reporthash = data["reporthash"]
+    customer = Patient.objects.filter(cust_id=cust_id)
+    needed_report = Report.objects.filter(cust_id=customer[0].cust_id,reporthash=reporthash)
+    needed_report = json.loads(needed_report)
+
+    report_filename = needed_report[0]["fields"] 
+
 map2func = {
     "speclist": speclist,
     "doctlist": doctlist,
@@ -130,6 +144,8 @@ map2func = {
     "docavlbl": docavlbl,
     "clientdata": clientdata,
     "newpatient": newpatient,
+    "listreports": listreports,
+    "downloadreport":downloadreport,
 }
 
 def runquery(request):
