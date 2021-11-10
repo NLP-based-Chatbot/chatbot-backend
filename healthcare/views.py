@@ -2,7 +2,6 @@ import mimetypes
 import os
 from django.http.response import HttpResponse
 
-
 def download_report(request,report_filename):
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     filename=report_filename
@@ -12,4 +11,3 @@ def download_report(request,report_filename):
     response = HttpResponse(path.read(), content_type=mime_type)
     response['Content-Disposition'] = "attachment; filename=%s.pdf" % filename
     return response
-

@@ -119,12 +119,27 @@ def newpatient(data):
     except Exception as e:
         return '[{"query_success":"0","error":'+str(e)+'}]'
 
+def newreport(data):
+    cust_id = data["cust_id"]
+    report_name = data["report_name"]
+    available_on = data["available_on"]
+
+    reporthash = "report_"+''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(25))
+    customer = Patient.objects.get(cust_id=cust_id)
+
+    try:
+        new_report = Report(cust_id=customer,report_name=report_name,reporthash=reporthash,available_on=available_on)
+        new_report.save()
+        return Report.objects.filter(reporthash=reporthash)
+    except Exception as e:
+        return '[{"query_success":"0","error":'+str(e)+'}]'
+
 def listreports(data):
     cust_id = data["cust_id"]
-    customer = Patient.objects.filter(cust_id=cust_id)
-    return Report.objects.filter(cust_id=customer[0].cust_id,date__gte=datetime.date.today())
+    customer = Patient.objects.get(cust_id=cust_id)
+    return Report.objects.filter(cust_id=customer.cust_id)
 
-def downloadreport(data):
+def getreport(data):
     cust_id = data["cust_id"]
     reporthash = data["reporthash"]
     customer = Patient.objects.filter(cust_id=cust_id)
@@ -135,14 +150,17 @@ def placemedtest(data):
     date = data["date"]
     time = data["time"]
     test_type = data["test_type"]
+    report_id = data["report_id"]
 
     cust = Patient.objects.get(cust_id=cust_id)
+    report = Report.objects.get(report_id=report_id)
 
     medtest = MedicalTest(
         cust_id_id=cust.cust_id,
         date=date,
         time_slot= time,
-        test_type=test_type
+        test_type=test_type,
+        report_id=report
     )
     
     try:
@@ -189,10 +207,11 @@ map2func = {
     "clientdata": clientdata,
     "newpatient": newpatient,
     "listreports": listreports,
-    "downloadreport":downloadreport,
+    "getreport":getreport,
     "makecomplain":makecomplain,
     "placemedtest":placemedtest,
     "listmedtest":listmedtest,
+    "newreport":newreport,
 }
 
 def runquery(request):
