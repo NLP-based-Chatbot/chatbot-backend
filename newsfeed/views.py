@@ -4,8 +4,8 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.parsers import JSONParser
 from rest_framework.decorators import api_view
-from newsfeed.models import News
-from newsfeed.serializer import NewsSerializer
+from newsfeed.models import Instruction, News
+from newsfeed.serializer import InstructionSerializer, NewsSerializer
 
 @api_view(['GET'])
 def news_list(request, domain):
@@ -47,6 +47,52 @@ def news_view(request):
     elif request.method == 'POST':
         data = JSONParser().parse(request)
         serializer = NewsSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data, status=201)
+        return JsonResponse(serializer.errors, status=400)
+
+
+@api_view(['GET'])
+def instructions_list(request, domain):
+    if request.method == 'GET':
+        snippets = Instruction.objects.filter(domain=domain)
+        serializer = InstructionSerializer(snippets, many=True)
+
+        return JsonResponse(serializer.data, safe=False)
+
+@api_view(['GET', 'PUT', 'DELETE'])
+def instructions_detail(request, pk):
+    try:
+        snippet = Instruction.objects.get(pk=pk)
+    except Instruction.DoesNotExist:
+        return Response(status=404)
+
+    if request.method == 'GET':
+        serializer = InstructionSerializer(snippet)
+        return JsonResponse(serializer.data)
+
+    elif request.method == 'PUT':
+        serializer = InstructionSerializer(snippet, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data)
+        return JsonResponse(serializer.errors, status=400)
+
+    elif request.method == 'DELETE':
+        snippet.delete()
+        return Response(status=204)
+
+@api_view(['GET', 'POST'])
+def instructions_view(request):
+    if request.method == 'GET':
+        snippets = Instruction.objects.all()
+        serializer = InstructionSerializer(snippets, many=True)
+        return JsonResponse(serializer.data, safe=False)
+
+    elif request.method == 'POST':
+        data = JSONParser().parse(request)
+        serializer = InstructionSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
             return JsonResponse(serializer.data, status=201)
