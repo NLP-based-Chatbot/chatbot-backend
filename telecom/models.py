@@ -8,6 +8,7 @@ class Packages(models.Model):
     value = models.IntegerField()
     description = models.CharField(max_length=400)
     activation_method = models.CharField(max_length=255)
+    url = models.CharField(max_length=255)
 
 class Complaint(models.Model):
     title = models.CharField(max_length=50)
@@ -21,3 +22,4 @@ class ProviderSpecificDetails(models.Model):
     provider = models.CharField(max_length=50)
     payment_method = models.CharField(max_length=20)
     description = models.CharField(max_length=400)
+    url = models.CharField(max_length=255)
