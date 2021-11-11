@@ -104,7 +104,13 @@ DATABASES = {
         'NAME': env('DATABASE_NAME'),
         'USER':env('DATABASE_USER'),
         'PASSWORD':env('DATABASE_PASSWORD'),
-        'HOST': env('DATABASE_HOST')
+        'HOST': env('DATABASE_HOST'),
+        'TEST':{
+            'NAME': env('TEST_DATABASE_NAME'),
+            'USER':env('TEST_DATABASE_USER'),
+            'PASSWORD':env('TEST_DATABASE_PASSWORD'),
+            'HOST': env('TEST_DATABASE_HOST'),
+        }
     }
 }
 
