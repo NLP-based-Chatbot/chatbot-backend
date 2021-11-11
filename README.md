@@ -11,7 +11,9 @@
 6. Set python interpreter on VS code by 
    `view -> command pallete -> Search python interpreter -> Enter path -> add /scripts/python at the end -> add interpreter path`
 8. Install dependencies from `requirments.txt` using `pip install -r requirements.txt`
-8. Run app using `python manage.py runserver`   
+
+## Run backend server
+ `python manage.py runserver`   
 
 
 
