@@ -6,7 +6,8 @@
             "detail_type" : "new_connection",
             "provider" : "dialog",
             "payment_method" : "prepaid",
-            "description" : "Please check from the Dialog Official website - https://www.dialog.lk/mobile-prepaid-packages"
+            "description" : "Please check from the Dialog Official website", 
+            "url": "https://www.dialog.lk/mobile-prepaid-packages"
         }
     },
     {
@@ -16,7 +17,8 @@
             "detail_type" : "new_connection",
             "provider" : "mobitel",
             "payment_method" : "prepaid",
-            "description" : "Please check from the Mobitel Official website - https://www.mobitel.lk/prepaid"
+            "description" : "Please check from the Mobitel Official website", 
+            "url": "https://www.mobitel.lk/prepaid"
         }
     },
     {
@@ -26,7 +28,8 @@
             "detail_type" : "new_connection",
             "provider" : "airtel",
             "payment_method" : "prepaid",
-            "description" : "Please check from the AirTel Official website - https://www.airtel.lk/get-a-new-connection/"
+            "description" : "Please check from the AirTel Official website", 
+            "url": "https://www.airtel.lk/get-a-new-connection/"
         }
     },
     {
@@ -36,7 +39,8 @@
             "detail_type" : "new_connection",
             "provider" : "Hutch",
             "payment_method" : "prepaid",
-            "description" : "Please check from the Hutch Official website - https://hutch.lk"
+            "description" : "Please check from the Hutch Official website", 
+            "url": "https://hutch.lk"
         }
     },
     {
@@ -46,7 +50,8 @@
             "detail_type" : "new_connection",
             "provider" : "dialog",
             "payment_method" : "postpaid",
-            "description" : "Please check from the Dialog Official website - https://www.dialog.lk/mobile-postpaid"
+            "description" : "Please check from the Dialog Official website", 
+            "url": "https://www.dialog.lk/mobile-postpaid"
         }
     },
     {
@@ -56,7 +61,8 @@
             "detail_type" : "new_connection",
             "provider" : "mobitel",
             "payment_method" : "postpaid",
-            "description" : "Please check from the Mobitel Official website - https://www.mobitel.lk/postpaid"
+            "description" : "Please check from the Mobitel Official website", 
+            "url": "https://www.mobitel.lk/postpaid"
         }
     },
     {
@@ -66,7 +72,8 @@
             "detail_type" : "new_connection",
             "provider" : "airtel",
             "payment_method" : "postpaid",
-            "description" : "Please check from the AirTel Official website - https://www.airtel.lk/get-a-new-connection-post-paid/"
+            "description" : "Please check from the AirTel Official website", 
+            "url": "https://www.airtel.lk/get-a-new-connection-post-paid/"
         }
     },
     {
@@ -76,7 +83,8 @@
             "detail_type" : "new_connection",
             "provider" : "Hutch",
             "payment_method" : "postpaid",
-            "description" : "Please check from the Hutch Official website - https://hutch.lk"
+            "description" : "Please check from the Hutch Official website", 
+            "url": "https://hutch.lk"
         }
     },
     {
@@ -86,7 +94,8 @@
             "detail_type" : "loan",
             "provider" : "dialog",
             "payment_method" : "prepaid",
-            "description" : "You can request for a loan from Dialog by dialing 356 or '#356#"
+            "description" : "You can request for a loan from Dialog by dialing 356 or '#356#",
+            "url" : "https://www.dialog.lk/mobile-commerce-reload-loan/"
         }
     },
     {
@@ -96,7 +105,8 @@
             "detail_type" : "loan",
             "provider" : "mobitel",
             "payment_method" : "prepaid",
-            "description" : "You can request for a loan from Mobitel by dialing #247#"
+            "description" : "You can request for a loan from Mobitel by dialing #247#",
+            "url" : "https://www.mobitel.lk/prepaidloan"
         }
     },
     {
@@ -106,7 +116,8 @@
             "detail_type" : "loan",
             "provider" : "airtel",
             "payment_method" : "prepaid",
-            "description" : "You can request for a loan from Airtel by dialing *500#"
+            "description" : "You can request for a loan from Airtel by dialing *500#",
+            "url" : "https://www.airtel.lk/airtel-services/#loan_services"
         }
     },
     {
@@ -116,7 +127,8 @@
             "detail_type" : "loan",
             "provider" : "hutch",
             "payment_method" : "prepaid",
-            "description" : "You can request for a loan from Hutch by dialing 232 or *232#"
+            "description" : "You can request for a loan from Hutch by dialing 232 or *232#",
+            "url" : "https://hutch.lk/credit-management/"
         }
     },
     {
@@ -126,7 +138,8 @@
             "detail_type" : "change_plan",
             "provider" : "dialog",
             "payment_method" : "none",
-            "description" : "you can convert your package from prepaid to Postpaid and vice versa while retaining your existing number. Simply visit any Dialog Customer Service Centre or dial '#678#' for self service"
+            "description" : "you can convert your package from prepaid to Postpaid and vice versa while retaining your existing number. Simply visit any Dialog Customer Service Centre or dial '#678#' for self service",
+            "url" : "https://www.dialog.lk/prepaid-to-postpaid-and-vice-versa-package-change"
         }
     },
     {
@@ -136,7 +149,8 @@
             "detail_type" : "change_plan",
             "provider" : "mobitel",
             "payment_method" : "none",
-            "description" : "You can transfer a connection from Pre-Paid to Post Paid by calling over at one of the Mobitel touch points. http://www.mobitel.lk/store-find"
+            "description" : "You can transfer a connection from Pre-Paid to Post Paid by calling over at one of the Mobitel touch points.", 
+            "url": "http://www.mobitel.lk/store-find"
         }
     },
     {
@@ -146,7 +160,8 @@
             "detail_type" : "change_plan",
             "provider" : "airtel",
             "payment_method" : "none",
-            "description" : "You can visit your nearest Airtel retail outlet and switch to a different package"
+            "description" : "You can visit your nearest Airtel retail outlet and switch to a different package",
+            "url" : "https://www.airtel.lk/how-do-i-check-my-data-usage-3/"
         }
     },
     {
@@ -156,7 +171,8 @@
             "detail_type" : "change_plan",
             "provider" : "hutch",
             "payment_method" : "none",
-            "description" : "You can visit your nearest Hutch retail outlet and switch to a different package"
+            "description" : "You can visit your nearest Hutch retail outlet and switch to a different package",
+            "url" : "https://hutch.lk/postpaid/"
         }
     },
     {
@@ -166,7 +182,8 @@
             "detail_type" : "check_balance",
             "provider" : "dialog",
             "payment_method" : "none",
-            "description" : "Dialog customers can check the balance by dailing '#456#'"
+            "description" : "Dialog customers can check the balance by dailing '#456#'",
+            "url" : "none"
         }
     },
     {
@@ -176,7 +193,8 @@
             "detail_type" : "check_balance",
             "provider" : "mobitel",
             "payment_method" : "none",
-            "description" : "Mobitel customers can check the balance by dailing '*100#'"
+            "description" : "Mobitel customers can check the balance by dailing '*100#'",
+            "url" :  "none"
         }
     },
     {
@@ -186,7 +204,8 @@
             "detail_type" : "check_balance",
             "provider" : "airtel",
             "payment_method" : "none",
-            "description" : "Airtel customers can check the balance by dailing '*555#'"
+            "description" : "Airtel customers can check the balance by dailing '*555#'",
+            "url" :  "none"
         }
     },
     {
@@ -196,7 +215,8 @@
             "detail_type" : "check_balance",
             "provider" : "hutch",
             "payment_method" : "none",
-            "description" : "Hutch customers can check the balance by dailing '*344#'"
+            "description" : "Hutch customers can check the balance by dailing '*344#'",
+            "url" :  "none"
         }
     },
     {
@@ -206,7 +226,8 @@
             "detail_type" : "sim_lost",
             "provider" : "dialog",
             "payment_method" : "none",
-            "description" : "Contact the Dialog Help Desk via 1777 and disconnect the connection immediately. Then there are two options to obtain the lost SIM as follows; 1. Visiting to the nearest Dialog Arcade and get your new replacement SIM and the charges of Rs 150"
+            "description" : "Contact the Dialog Help Desk via 1777 and disconnect the connection immediately. Then there are two options to obtain the lost SIM as follows; 1. Visiting to the nearest Dialog Arcade and get your new replacement SIM and the charges of Rs 150",
+            "url" :  "none"
         }
     },
     {
@@ -216,7 +237,8 @@
             "detail_type" : "sim_lost",
             "provider" : "mobitel",
             "payment_method" : "none",
-            "description" : "Please visit any of our Big M Outlets, Mobitel counter at Singer Mega or Mobitel authorized service centers , for a replacement of your SIM. Charges Applicable. Standard SIM -Rs.100.00, 4G LTE SIM – Rs.200.00, Micro /NANO SIM- Rs.200.00."
+            "description" : "Please visit any of our Big M Outlets, Mobitel counter at Singer Mega or Mobitel authorized service centers , for a replacement of your SIM. Charges Applicable. Standard SIM -Rs.100.00, 4G LTE SIM – Rs.200.00, Micro /NANO SIM- Rs.200.00.",
+            "url" :  "none"
         }
     },
     {
@@ -226,7 +248,8 @@
             "detail_type" : "sim_lost",
             "provider" : "airtel",
             "payment_method" : "none",
-            "description" : "Call 1755 and inform that you have lost the airtel SIM / Mobile Handset – we will immediately deactivate the sim to avoid misuse. You can visit any retailer with your NIC to get a new replaced sim card for your number."
+            "description" : "Call 1755 and inform that you have lost the airtel SIM / Mobile Handset – we will immediately deactivate the sim to avoid misuse. You can visit any retailer with your NIC to get a new replaced sim card for your number.",
+            "url" :  "none"
         }
     },
     {
@@ -236,7 +259,8 @@
             "detail_type" : "sim_lost",
             "provider" : "hutch",
             "payment_method" : "none",
-            "description" : "Please visit this site to replace your hutch sim https://hutch.lk/sim-replacement/"
+            "description" : "Please visit this site to replace your hutch sim ", 
+            "url": "https://hutch.lk/sim-replacement/"
         }
     },
     {
@@ -246,7 +270,8 @@
             "detail_type" : "recharge",
             "provider" : "dialog",
             "payment_method" : "none",
-            "description" : "Now you can do Dialog bill payments online from here https://www.dialog.lk/browse/payments.jsp"
+            "description" : "Now you can do Dialog bill payments online from here ", 
+            "url": "https://www.dialog.lk/browse/payments.jsp"
         }
     },
     {
@@ -256,7 +281,8 @@
             "detail_type" : "recharge",
             "provider" : "mobitel",
             "payment_method" : "none",
-            "description" : "Now you can do Mobitel bill payments online from here https://online.mobitel.lk/onlinepay/"
+            "description" : "Now you can do Mobitel bill payments online from here ", 
+            "url": "https://online.mobitel.lk/onlinepay/"
         }
     },
     {
@@ -266,7 +292,8 @@
             "detail_type" : "recharge",
             "provider" : "airtel",
             "payment_method" : "none",
-            "description" : "Now you can do Airtel bill payments online from here https://recharge.airtel.lk"
+            "description" : "Now you can do Airtel bill payments online from here ", 
+            "url": "https://recharge.airtel.lk"
         }
     },
     {
@@ -276,7 +303,8 @@
             "detail_type" : "recharge",
             "provider" : "hutch",
             "payment_method" : "none",
-            "description" : "Now you can do Hutch bill payments online from here https://online.hutch.lk/hopp/"
+            "description" : "Now you can do Hutch bill payments online from here ", 
+            "url": "https://online.hutch.lk/hopp/"
         }
     },
     {
@@ -286,7 +314,8 @@
             "detail_type" : "signal_lost",
             "provider" : "dialog",
             "payment_method" : "none",
-            "description" : "Call Dialog customer care 1777"
+            "description" : "Call Dialog customer care 1777",
+            "url" :  "none"
         }
     },
     {
@@ -296,7 +325,8 @@
             "detail_type" : "signal_lost",
             "provider" : "mobitel",
             "payment_method" : "none",
-            "description" : "Call Mobitel customer care 1717"
+            "description" : "Call Mobitel customer care 1717",
+            "url" :  "none"
         }
     },
     {
@@ -306,7 +336,8 @@
             "detail_type" : "signal_lost",
             "provider" : "airtel",
             "payment_method" : "none",
-            "description" : "Call Airtel customer care 555"
+            "description" : "Call Airtel customer care 555",
+            "url" :  "none"
         }
     },
     {
@@ -316,7 +347,8 @@
             "detail_type" : "signal_lost",
             "provider" : "hutch",
             "payment_method" : "none",
-            "description" : "Call Hutch customer care 1788"
+            "description" : "Call Hutch customer care 1788",
+            "url" :  "none"
         }
     },
     {
@@ -326,7 +358,8 @@
             "detail_type" : "coverage",
             "provider" : "dialog",
             "payment_method" : "none",
-            "description" : "You can see the Dialog coverage map from here https://www.dialog.lk/browse/hbbRevampCoverageMap.jsp."
+            "description" : "You can see the Dialog coverage map from here ", 
+            "url": "https://www.dialog.lk/browse/hbbRevampCoverageMap.jsp."
         }
     },
     {
@@ -336,7 +369,8 @@
             "detail_type" : "coverage",
             "provider" : "mobitel",
             "payment_method" : "none",
-            "description" : "You can see the Mobitel coverage manp from here https://www.mobitel.lk/coverage."
+            "description" : "You can see the Mobitel coverage manp from here ", 
+            "url": "https://www.mobitel.lk/coverage."
         }
     },
     {
@@ -346,7 +380,8 @@
             "detail_type" : "coverage",
             "provider" : "airtel",
             "payment_method" : "none",
-            "description" : " You can see the Airtel coverage manp from here https://www.airtel.lk/coverage-map/"
+            "description" : " You can see the Airtel coverage manp from here ", 
+            "url": "https://www.airtel.lk/coverage-map/"
         }
     },
     {
@@ -356,7 +391,8 @@
             "detail_type" : "coverage",
             "provider" : "hutch",
             "payment_method" : "none",
-            "description" : "You can see the Hutch coverage manp from here https://hutch.lk/coverage-map/"
+            "description" : "You can see the Hutch coverage manp from here ", 
+            "url": "https://hutch.lk/coverage-map/"
         }
     },
     {
@@ -366,7 +402,8 @@
             "detail_type" : "broadband",
             "provider" : "dialog",
             "payment_method" : "none",
-            "description" : "Please check from the Official Dialog website https://www.dialog.lk/browse/hbbRevampHomePage.jsp"
+            "description" : "Please check from the Official Dialog website ", 
+            "url": "https://www.dialog.lk/browse/hbbRevampHomePage.jsp"
         }
     },
     {
@@ -376,7 +413,8 @@
             "detail_type" : "broadband",
             "provider" : "mobitel",
             "payment_method" : "none",
-            "description" : "Please check from the Official Mobitel website https://www.mobitel.lk/broadband/new-connection"
+            "description" : "Please check from the Official Mobitel website ", 
+            "url": "https://www.mobitel.lk/broadband/new-connection"
         }
     },
     {
@@ -386,7 +424,8 @@
             "detail_type" : "broadband",
             "provider" : "airtel",
             "payment_method" : "none",
-            "description" : "Please check from the Official Hutch website https://hutch.lk/mifi-router/"
+            "description" : "Please check from the Official Hutch website ", 
+            "url": "https://hutch.lk/mifi-router/"
         }
     },
     {
@@ -396,7 +435,8 @@
             "detail_type" : "broadband",
             "provider" : "hutch",
             "payment_method" : "none",
-            "description" : "There is no broadband connection service to the givien service provider"
+            "description" : "There is no broadband connection service to the givien service provider",
+            "url" :  "none"
         }
     },
     {
@@ -406,7 +446,8 @@
             "detail_type" : "tv",
             "provider" : "dialog",
             "payment_method" : "none",
-            "description" : "Please visit the official Dialog website and follow the steps https://dlg.dialog.lk/DTV-buy-new-connection"
+            "description" : "Please visit the official Dialog website and follow the steps ", 
+            "url": "https://dlg.dialog.lk/DTV-buy-new-connection"
         }
     },
     {
@@ -416,7 +457,8 @@
             "detail_type" : "tv",
             "provider" : "peo",
             "payment_method" : "none",
-            "description" : "Please visit the official SLTMobitel website and follow the steps https://www.slt.lk/en/personal/peo-tv/peocharges"
+            "description" : "Please visit the official SLTMobitel website and follow the steps ", 
+            "url": "https://www.slt.lk/en/personal/peo-tv/peocharges"
         }
     },
     {
@@ -426,7 +468,8 @@
             "detail_type" : "tv_check_bill",
             "provider" : "dialog",
             "payment_method" : "none",
-            "description" : "Your DTV bill can be checked via below methods. 1. By dialing 456 | 2. Type Bill[space]DTV account number and send to 679 (from any Dialog mobile connection) | 3. By dialing '#147#' | 4. Via My Account Portal | 5. Via MyDialog App"
+            "description" : "Your DTV bill can be checked via below methods. 1. By dialing 456 | 2. Type Bill[space]DTV account number and send to 679 (from any Dialog mobile connection) | 3. By dialing '#147#' | 4. Via My Account Portal | 5. Via MyDialog App",
+            "url" :  "none"
         }
     },
     {
@@ -436,7 +479,8 @@
             "detail_type" : "tv_check_bill",
             "provider" : "peo",
             "payment_method" : "none",
-            "description" : "Visit this site to view possible methods to pay your peo TV bills 'https://www.slt.lk/en/content/billing-payments'"
+            "description" : "Visit this site to view possible methods to pay your peo TV bills ", 
+            "url": "https://www.slt.lk/en/content/billing-payments'"
         }
     },
     {
@@ -446,7 +490,8 @@
             "detail_type" : "tv_packages",
             "provider" : "dialog",
             "payment_method" : "none",
-            "description" : "Please visit the official Dialog website to see package details 'https://www.dialog.lk/browse/tvPackages.jsp'"
+            "description" : "Please visit the official Dialog website to see package details ", 
+            "url": "https://www.dialog.lk/browse/tvPackages.jsp'"
         }
     },
     {
@@ -456,7 +501,8 @@
             "detail_type" : "tv_packages",
             "provider" : "peo",
             "payment_method" : "none",
-            "description" : "Please visit the official SLT Mobitel website to see package details 'https://www.slt.lk/en/personal/peo-tv/packages-and-charges'"
+            "description" : "Please visit the official SLT Mobitel website to see package details ", 
+            "url": "https://www.slt.lk/en/personal/peo-tv/packages-and-charges'"
         }
     }
 ]
