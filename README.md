@@ -9,7 +9,7 @@
 5. Use `pipenv shell` to activate virtual enviroment
 6. Copy the path of virtual enviroment using `pipenv --venv`
 6. Set python interpreter on VS code by 
-   `view -> command pallete -> Search python interpreter -> paste path -> add /scripts/python at the end -> add interpreter path`
+   `view -> command pallete -> Search python interpreter -> Enter path -> add /scripts/python at the end -> add interpreter path`
 8. Install dependencies from `requirments.txt` using `pip install -r requirements.txt`
 8. Run app using `python manage.py runserver`   
 
