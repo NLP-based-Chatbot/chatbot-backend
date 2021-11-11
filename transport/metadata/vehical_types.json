@@ -1,0 +1,16 @@
+[
+	{
+		"model": "transport.Vehical_Types",
+		"pk": 1,
+		"fields": {
+			"vehical_type": "bus"
+		}
+	},
+	{
+		"model": "transport.Vehical_Types",
+		"pk": 2,
+		"fields": {
+			"vehical_type": "train"
+		}
+	}
+]
