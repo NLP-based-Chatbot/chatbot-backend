@@ -49,81 +49,83 @@ class HealthcareDBQueryTest(APITestCase):
         data = {
             "function":"speclist",
             "data":{}
-            }
+        }
         response = self.client.post(self.query_url,data,format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_doc_with_spec(self):
         data = {
-    "function":"doctlist",
-    "data":{
-        "spec_id":"1"
-    }
-}
+            "function":"doctlist",
+            "data":{
+                "spec_id":"1"
+            }
+        }
         response = self.client.post(self.query_url,data,format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_doc_no_spec(self):
         data = {
-    "function":"doctlist",
-    "data":{}
-}
+            "function":"doctlist",
+            "data":{}
+        }
         response = self.client.post(self.query_url,data,format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_place_appointment(self):
         data = {
-    "function":"newappoint",
-    "data":{
-        "doct_id":"1",
-        "cust_id":"4",
-        "date":"2029-10-05",
-        "time":"20:00"
-    }
-}
+            "function":"newappoint",
+            "data":{
+                "doct_id":"1",
+                "cust_id":"51",
+                "date":"2029-10-05",
+                "time":"20:00"
+            }
+        }
         response = self.client.post(self.query_url,data,format='json')
+        
+        self.assertEqual(response.content,b'[{"query_success":"1"}]')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_change_appointment(self):
         data = {
-    "function":"changeappoint",
-    "data":{
-        "appoint_id":"1",
-        "cust_id":"2",
-        "date":"2025-10-05",
-        "time":"21:00"
-    }
-}
+            "function":"changeappoint",
+            "data":{
+                "appoint_id":"1",
+                "cust_id":"2",
+                "date":"2025-10-05",
+                "time":"21:00"
+            }
+        }
         response = self.client.post(self.query_url,data,format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_delete_appointment(self):
         data = {
-    "function":"deleteappoint",
-    "data":{
-        "appoint_id":"5",
-        "cust_id":"4"
-    }
-}
+            "function":"deleteappoint",
+            "data":{
+                "appoint_id":"5",
+                "cust_id":"4"
+            }
+        }
         response = self.client.post(self.query_url,data,format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_list_appointment(self):
         data = {
-    "function":"listappoint",
-    "data":{
-        "cust_id":"4"
-    }
-}
+            "function":"listappoint",
+            "data":{
+                "cust_id":"5"
+            }
+        }
         response = self.client.post(self.query_url,data,format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_doct_available(self):
         data = {
-    "function":"docavlbl",
-    "data":{
-        "docthash":"doc_cd6sg9fgsfd5g5f8sgfg5sg95"
-    }
-}
+            "function":"docavlbl",
+            "data":{
+                "docthash":"doc_cd6sg9fgsfd5g5f8sgfg5sg95"
+            }
+        }
         response = self.client.post(self.query_url,data,format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)

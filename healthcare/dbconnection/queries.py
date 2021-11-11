@@ -42,9 +42,8 @@ def newappoint(data):
     doc = Doctor.objects.get(doctor_id=doct_id)
     cust = Patient.objects.get(cust_id=cust_id)
 
-    new_appointment = Appiontment(doctor_id_id=doc.doctor_id, cust_id_id=cust.cust_id,date=date,time_slot=time)
-
     try:
+        new_appointment = Appiontment(doctor_id_id=doc.doctor_id, cust_id_id=cust.cust_id,date=date,time_slot=time)
         new_appointment.save()
         return '[{"query_success":"1"}]'
     except Exception as e:
@@ -93,7 +92,10 @@ def deleteappoint(data):
 def listappoint(data):
     cust_id = data["cust_id"]
     customer = Patient.objects.filter(cust_id=cust_id)
-    return Appiontment.objects.filter(cust_id=customer[0].cust_id,date__gte=datetime.date.today())
+    try:
+        return Appiontment.objects.filter(cust_id=customer[0].cust_id,date__gte=datetime.date.today())
+    except Exception:
+        return '[]'
 
 def docbyhash(data):
     docthash = data["docthash"]
