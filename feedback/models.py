@@ -9,3 +9,4 @@ class Feedback(models.Model):
     feedback = models.CharField(max_length=200, null=True)
     chatsession = models.JSONField()
     feedback = models.CharField(max_length=200)
+    resolved = models.BooleanField(default=False, null=True)

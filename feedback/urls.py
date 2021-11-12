@@ -7,5 +7,6 @@ from . import views
 
 urlpatterns = [
     path('',csrf_exempt(views.feedback_view)),
+    path('update/<int:pk>', csrf_exempt(views.feedback_update_view))
 ]
 

@@ -1,19 +1,15 @@
-from rest_framework import serializers, status
+from rest_framework import status
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
-from transport import serializer
+from rest_framework.parsers import JSONParser
 
-from transport.serializer import ComplaintSerializer, OfficesSerializer, VehicalTypesSerializer
-from transport.serializer import ScheduleSerializer
-from transport.serializer import BookingsSerializer
-
-from transport.models import Offices, Vehical_Types
-from transport.models import Schedules
-from transport.models import Bookings
+from transport.serializer import ComplaintSerializer, OfficesSerializer, VehicalTypesSerializer, ScheduleSerializer, BookingsSerializer
+from transport.models import Offices, Vehical_Types, Schedules
 
 from django.http import JsonResponse
 
-# @api_view(['GET'])
+def runquery(request):
+  querydata = request.body
+
 def schedule_view(request, vehical_type, departure, destination):
   if request.method == 'GET':
       vehical_types = Vehical_Types.objects.filter(vehical_type=vehical_type)
@@ -26,16 +22,15 @@ def schedule_view(request, vehical_type, departure, destination):
       
       return JsonResponse(serializer_schedule.data, safe=False)  
 
-@api_view(['POST'])
 def booking_view(request):
   if request.method == 'POST':
-    serializer = BookingsSerializer(data=request.data)
+    data = JSONParser().parse(request)
+    serializer = BookingsSerializer(data=data)
     if serializer.is_valid():
       serializer.save()
-      return Response(serializer.data, status=status.HTTP_201_CREATED)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST) 
+      return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)
+    return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST) 
 
-@api_view(['GET'])
 def office_view(request, vehical_type, office_name, address):
   if request.method == 'GET':
     vehical_types = Vehical_Types.objects.filter(vehical_type=vehical_type)
@@ -48,11 +43,11 @@ def office_view(request, vehical_type, office_name, address):
 
     return JsonResponse(serializer_office.data, safe=False)         
 
-@api_view(['POST'])
 def complaint_view(request):
   if request.method == 'POST':
-    serializer = ComplaintSerializer(data=request.data)
+    data = JSONParser().parse(request)
+    serializer = ComplaintSerializer(data=data)
     if serializer.is_valid():
       serializer.save()
-      return Response(serializer.data, status=status.HTTP_201_CREATED)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  
+      return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)
+    return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  
