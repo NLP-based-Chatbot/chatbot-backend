@@ -3,13 +3,13 @@
 		"model": "transport.Schedules",
 		"pk": 1,
 		"fields": {
-			"vehical_number": "NA-3021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1000",
 			"departure": "balangoda",
-			"dep_time": "5.00 am",
+			"dep_time": "05:00:00",
 			"destination": "colombo",
-			"des_time": "10.00 am",
-			"booking_available": "yes",
+			"des_time": "10:00:00",
+			"booking_available": true,
 			"seats_available": 10
 		}
 	},
@@ -17,13 +17,13 @@
 		"model": "transport.Schedules",
 		"pk": 2,
 		"fields": {
-			"vehical_number": "NA-4021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1200",
 			"departure": "balangoda",
-			"dep_time": "6.00 am",
+			"dep_time": "06:00:00",
 			"destination": "colombo",
-			"des_time": "11.00 am",
-			"booking_available": "yes",
+			"des_time": "11:00:00",
+			"booking_available": true,
 			"seats_available": 15
 		}
 	},
@@ -31,13 +31,13 @@
 		"model": "transport.Schedules",
 		"pk": 3,
 		"fields": {
-			"vehical_number": "NA-5021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1200",
 			"departure": "balangoda",
-			"dep_time": "8.00 am",
+			"dep_time": "08:00:00",
 			"destination": "colombo",
-			"des_time": "1.00 pm",
-			"booking_available": "yes",
+			"des_time": "13:00:00",
+			"booking_available": true,
 			"seats_available": 7
 		}
 	},
@@ -45,91 +45,91 @@
 		"model": "transport.Schedules",
 		"pk": 4,
 		"fields": {
-			"vehical_number": "NA-6021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1300",
 			"departure": "balangoda",
-			"dep_time": "10.00 am",
+			"dep_time": "10:00:00",
 			"destination": "colombo",
-			"des_time": "3.00 pm",
-			"booking_available": "no"
+			"des_time": "15:00:00",
+			"booking_available": false
 		}
 	},
 	{
 		"model": "transport.Schedules",
 		"pk": 5,
 		"fields": {
-			"vehical_number": "NA-7021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1400",
 			"departure": "balangoda",
-			"dep_time": "12.00 pm",
+			"dep_time": "12:00:00",
 			"destination": "colombo",
-			"des_time": "5.00 pm",
-			"booking_available": "no"
+			"des_time": "17:00:00",
+			"booking_available": false
 		}
 	},
 	{
 		"model": "transport.Schedules",
 		"pk": 6,
 		"fields": {
-			"vehical_number": "NA-8021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1500",
 			"departure": "balangoda",
-			"dep_time": "2.00 pm",
+			"dep_time": "14:00:00",
 			"destination": "colombo",
-			"des_time": "7.00 pm",
-			"booking_available": "no"
+			"des_time": "19:00:00",
+			"booking_available": false
 		}
 	},
 	{
 		"model": "transport.Schedules",
 		"pk": 7,
 		"fields": {
-			"vehical_number": "NA-9021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1600",
 			"departure": "balangoda",
-			"dep_time": "4.00 pm",
+			"dep_time": "16:00:00",
 			"destination": "colombo",
-			"des_time": "9.00 pm",
-			"booking_available": "no"
+			"des_time": "21:00:00",
+			"booking_available": false
 		}
 	},
 	{
 		"model": "transport.Schedules",
 		"pk": 8,
 		"fields": {
-			"vehical_number": "NB-4021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1700",
 			"departure": "balangoda",
-			"dep_time": "6.00 pm",
+			"dep_time": "18:00:00",
 			"destination": "colombo",
-			"des_time": "11.00 pm",
-			"booking_available": "no"
+			"des_time": "23:00:00",
+			"booking_available": false
 		}
 	},
 	{
 		"model": "transport.Schedules",
 		"pk": 9,
 		"fields": {
-			"vehical_number": "NB-5021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1800",
 			"departure": "balangoda",
-			"dep_time": "8.00 pm",
+			"dep_time": "20:00:00",
 			"destination": "colombo",
-			"des_time": "1.00 am",
-			"booking_available": "no"
+			"des_time": "01:00:00",
+			"booking_available": false
 		}
 	},
 	{
 		"model": "transport.Schedules",
 		"pk": 10,
 		"fields": {
-			"vehical_number": "NB-6021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1900",
 			"departure": "balangoda",
-			"dep_time": "4.00 am",
+			"dep_time": "04:00:00",
 			"destination": "colombo",
-			"des_time": "9.00 am",
-			"booking_available": "yes",
+			"des_time": "09:00:00",
+			"booking_available": true,
 			"seats_available": 4
 		}
 	},
@@ -137,130 +137,130 @@
 		"model": "transport.Schedules",
 		"pk": 11,
 		"fields": {
-			"vehical_number": "NC-4021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1900",
 			"departure": "colombo",
-			"dep_time": "6.00 am",
+			"dep_time": "06:00:00",
 			"destination": "balangoda",
-			"des_time": "11.00 am",
-			"booking_available": "no"
+			"des_time": "11:00:00",
+			"booking_available": false
 		}
 	},
 	{
 		"model": "transport.Schedules",
 		"pk": 12,
 		"fields": {
-			"vehical_number": "NC-5021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1800",
 			"departure": "colombo",
-			"dep_time": "7.00 pm",
+			"dep_time": "07:00:00",
 			"destination": "balangoda",
-			"des_time": "12.00 pm",
-			"booking_available": "no"
+			"des_time": "12:00:00",
+			"booking_available": false
 		}
 	},
 	{
 		"model": "transport.Schedules",
 		"pk": 13,
 		"fields": {
-			"vehical_number": "NC-6021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1700",
 			"departure": "colombo",
-			"dep_time": "8.00 am",
+			"dep_time": "08:00:00",
 			"destination": "balangoda",
-			"des_time": "1.00 pm",
-			"booking_available": "no"
+			"des_time": "13:00:00",
+			"booking_available": false
 		}
 	},
 	{
 		"model": "transport.Schedules",
 		"pk": 14,
 		"fields": {
-			"vehical_number": "NC-7021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1600",
 			"departure": "colombo",
-			"dep_time": "10.00 am",
+			"dep_time": "10:00:00",
 			"destination": "balangoda",
-			"des_time": "3.00 pm",
-			"booking_available": "no"
+			"des_time": "15:00:00",
+			"booking_available": false
 		}
 	},
 	{
 		"model": "transport.Schedules",
 		"pk": 15,
 		"fields": {
-			"vehical_number": "NC-8021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1500",
 			"departure": "colombo",
-			"dep_time": "12.00 pm",
+			"dep_time": "12:00:00",
 			"destination": "balangoda",
-			"des_time": "5.00 pm",
-			"booking_available": "no"
+			"des_time": "17:00:00",
+			"booking_available": false
 		}
 	},
 	{
 		"model": "transport.Schedules",
 		"pk": 16,
 		"fields": {
-			"vehical_number": "NA-6021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1400",
 			"departure": "colombo",
-			"dep_time": "1.00 pm",
+			"dep_time": "13:00:00",
 			"destination": "balangoda",
-			"des_time": "6.00 pm",
-			"booking_available": "no"
+			"des_time": "18:00:00",
+			"booking_available": false
 		}
 	},
 	{
 		"model": "transport.Schedules",
 		"pk": 17,
 		"fields": {
-			"vehical_number": "NA-3021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1300",
 			"departure": "colombo",
-			"dep_time": "3.00 pm",
+			"dep_time": "15:00:00",
 			"destination": "balangoda",
-			"des_time": "8.00 pm",
-			"booking_available": "no"
+			"des_time": "20:00:00",
+			"booking_available": false
 		}
 	},
 	{
 		"model": "transport.Schedules",
 		"pk": 18,
 		"fields": {
-			"vehical_number": "NA-4021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1200",
 			"departure": "colombo",
-			"dep_time": "5.00 pm",
+			"dep_time": "17:00:00",
 			"destination": "balangoda",
-			"des_time": "10.00 pm",
-			"booking_available": "no"
+			"des_time": "22:00:00",
+			"booking_available": false
 		}
 	},
 	{
 		"model": "transport.Schedules",
 		"pk": 19,
 		"fields": {
-			"vehical_number": "NA-5021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1100",
 			"departure": "colombo",
-			"dep_time": "7.00 pm",
+			"dep_time": "19:00:00",
 			"destination": "balangoda",
-			"des_time": "12.00 am",
-			"booking_available": "no"
+			"des_time": "12:00:00",
+			"booking_available": false
 		}
 	},
 	{
 		"model": "transport.Schedules",
 		"pk": 20,
 		"fields": {
-			"vehical_number": "NA-6021",
-			"vehical_type": "bus",
+			"type_id": 1,
+			"vehical_number": "NA1000",
 			"departure": "colombo",
-			"dep_time": "9.00 pm",
+			"dep_time": "21:00:00",
 			"destination": "balangoda",
-			"des_time": "2.00 am",
-			"booking_available": "no"
+			"des_time": "02:00:00",
+			"booking_available": false
 		}
 	}
 ]
