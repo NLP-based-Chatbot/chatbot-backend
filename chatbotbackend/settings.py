@@ -184,7 +184,7 @@ SIMPLE_JWT = {
     'UPDATE_LAST_LOGIN': True,
 }
 
-DOMAIN = 'localhost:3000'
+DOMAIN = 'http://20.185.23.148'
 SITE_NAME = 'Wingman'
 
 DJOSER = {
