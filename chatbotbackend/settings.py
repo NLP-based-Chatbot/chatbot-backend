@@ -190,7 +190,7 @@ SIMPLE_JWT = {
     'UPDATE_LAST_LOGIN': True,
 }
 
-DOMAIN = '20.185.23.148'
+DOMAIN = '20.124.19.61'
 SITE_NAME = 'Wingman'
 
 DJOSER = {
