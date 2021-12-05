@@ -1,0 +1,201 @@
+[
+	{
+		"model": "transport.Offices",
+		"pk": 1,
+		"fields": {
+			"type_id": 1,
+			"office_name": "regional office",
+			"address": "colombo",
+			"contact_number": "011 770 6320",
+			"email": "info@sltb.lk"
+		}
+	},
+	{
+		"model": "transport.Offices",
+		"pk": 2,
+		"fields": {
+			"type_id": 1,
+			"office_name": "regional office",
+			"address": "eastern",
+			"contact_number": "067 226 0281",
+			"email": "info@sltb.lk"
+		}
+	},
+	{
+		"model": "transport.Offices",
+		"pk": 3,
+		"fields": {
+			"type_id": 1,
+			"office_name": "regional office",
+			"address": "gampaha",
+			"contact_number": "011 223 6532",
+			"email": "info@sltb.lk"
+		}
+	},
+	{
+		"model": "transport.Offices",
+		"pk": 4,
+		"fields": {
+			"type_id": 1,
+			"office_name": "regional office",
+			"address": "kaluthara",
+			"contact_number": "038 223 1626",
+			"email": "info@sltb.lk"
+		}
+	},
+	{
+		"model": "transport.Offices",
+		"pk": 5,
+		"fields": {
+			"type_id": 1,
+			"office_name": "regional office",
+			"address": "kandy",
+			"contact_number": "081 221 3590",
+			"email": "info@sltb.lk"
+		}
+	},
+	{
+		"model": "transport.Offices",
+		"pk": 6,
+		"fields": {
+			"type_id": 1,
+			"office_name": "regional office",
+			"address": "northern",
+			"contact_number": "021 222 2877",
+			"email": "info@sltb.lk"
+		}
+	},
+	{
+		"model": "transport.Offices",
+		"pk": 7,
+		"fields": {
+			"type_id": 1,
+			"office_name": "regional office",
+			"address": "nuwara eliya",
+			"contact_number": "055 226 5260",
+			"email": "info@sltb.lk"
+		}
+	},
+	{
+		"model": "transport.Offices",
+		"pk": 8,
+		"fields": {
+			"type_id": 1,
+			"office_name": "regional office",
+			"address": "rajarata",
+			"contact_number": "025 222 2564",
+			"email": "info@sltb.lk"
+		}
+	},
+	{
+		"model": "transport.Offices",
+		"pk": 9,
+		"fields": {
+			"type_id": 1,
+			"office_name": "regional office",
+			"address": "sabaragamuwa",
+			"contact_number": "036 222 2830",
+			"email": "info@sltb.lk"
+		}
+	},
+	{
+		"model": "transport.Offices",
+		"pk": 10,
+		"fields": {
+			"type_id": 1,
+			"office_name": "regional office",
+			"address": "southern",
+			"contact_number": "091 222 4056",
+			"email": "info@sltb.lk"
+		}
+	},
+	{
+		"model": "transport.Offices",
+		"pk": 11,
+		"fields": {
+			"type_id": 1,
+			"office_name": "regional office",
+			"address": "uva",
+			"contact_number": "055 222 2282",
+			"email": "info@sltb.lk"
+		}
+	},
+	{
+		"model": "transport.Offices",
+		"pk": 12,
+		"fields": {
+			"type_id": 1,
+			"office_name": "regional office",
+			"address": "wayamba",
+			"contact_number": "037 222 3182",
+			"email": "info@sltb.lk"
+		}
+	},
+
+	{
+		"model": "transport.Offices",
+		"pk": 13,
+		"fields": {
+			"type_id": 1,
+			"office_name": "depot",
+			"address": "balangoda",
+			"contact_number": "045 228 7281",
+			"email": "info@sltb.lk"
+		}
+	},
+	{
+		"model": "transport.Offices",
+		"pk": 14,
+		"fields": {
+			"type_id": 1,
+			"office_name": "depot",
+			"address": "bandarawela",
+			"contact_number": "057 222 2276",
+			"email": "info@sltb.lk"
+		}
+	},
+	{
+		"model": "transport.Offices",
+		"pk": 15,
+		"fields": {
+			"type_id": 1,
+			"office_name": "depot",
+			"address": "colombo",
+			"contact_number": "011 232 9606",
+			"email": "info@sltb.lk"
+		}
+	},
+	{
+		"model": "transport.Offices",
+		"pk": 16,
+		"fields": {
+			"type_id": 1,
+			"office_name": "depot",
+			"address": "embilipitiya",
+			"contact_number": "047 223 0281",
+			"email": "info@sltb.lk"
+		}
+	},
+	{
+		"model": "transport.Offices",
+		"pk": 17,
+		"fields": {
+			"type_id": 1,
+			"office_name": "depot",
+			"address": "galle",
+			"contact_number": "091 223 4191",
+			"email": "info@sltb.lk"
+		}
+	},
+	{
+		"model": "transport.Offices",
+		"pk": 18,
+		"fields": {
+			"type_id": 1,
+			"office_name": "depot",
+			"address": "gampaha",
+			"contact_number": "033 222 2281",
+			"email": "info@sltb.lk"
+		}
+	}
+]

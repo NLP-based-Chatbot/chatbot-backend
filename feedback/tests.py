@@ -23,8 +23,12 @@ class FeedbackTestCase(APITestCase):
 
         self.user_register()
         self.user_login()
-
+        self.authentication()
         return super().setUp()
+    
+    def authentication(self):
+        self.access_code = self.login_response.data['access']
+        self.client.credentials(HTTP_AUTHORIZATION="JWT "+ self.access_code)
 
     def user_register(self):
         response = self.client.post(self.register_url, self.register_data)
@@ -36,12 +40,11 @@ class FeedbackTestCase(APITestCase):
         user.save()
     
     def user_login(self):
-        response = self.client.post(self.login_url, self.login_data)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.login_response = self.client.post(self.login_url, self.login_data)
+        self.assertEqual(self.login_response.status_code, status.HTTP_200_OK)
 
     def test_record_feedback(self):
-        response = self.client.post(self.feedback_url, self.feedback_data, format='json')
-        #pdb.set_trace()
+        response = self.client.post(self.feedback_url, self.feedback_data,format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
     
     def test_get_feedback_data(self):
