@@ -37,7 +37,7 @@ def office_view(request, vehical_type, office_name, address):
     serializer_vehical_id = VehicalTypesSerializer(vehical_types, many=True)
 
     type_id = serializer_vehical_id.data[0]['type_id']   
-
+    
     office = Offices.objects.filter(type_id=type_id, office_name=office_name, address=address)
     serializer_office = OfficesSerializer(office, many=True)
 
